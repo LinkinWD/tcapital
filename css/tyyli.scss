@@ -1,0 +1,35 @@
+$vaalea-bg: #ece5e5;
+$tumma-bg: #393838;
+
+@mixin vaalea-varjo-koholla {
+	border-radius: 50px;
+	background: #e2dada;
+	box-shadow: 20px 20px 60px #c0b9b9, -20px -20px 60px #fffbfb;
+}
+
+@mixin vaalea-varjo-painunut {
+	border-radius: 50px;
+	background: #e2dada;
+	box-shadow: inset 20px 20px 60px #c0b9b9, inset -20px -20px 60px #fffbfb;
+}
+
+@mixin tumma-varjo-koholla {
+	border-radius: 50px;
+	background: #393838;
+	box-shadow: 20px 20px 60px #303030, -20px -20px 60px #424040;
+}
+
+@mixin tumma-varjo-painunut {
+	border-radius: 50px;
+	background: #393838;
+	box-shadow: inset 20px 20px 60px #303030, inset -20px -20px 60px #424040;
+}
+
+body {
+	background: $vaalea-bg;
+	color: $tumma-bg;
+}
+body.tumma {
+	background: $tumma-bg;
+	color: rgba($color: #ffffff, $alpha: 0.6);
+}
