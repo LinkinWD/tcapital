@@ -1,10 +1,53 @@
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
 body {
   background: #ece5e5;
   color: #393838;
+  font-family: 'Montserrat', sans-serif;
 }
 
 body.tumma {
   background: #393838;
   color: rgba(255, 255, 255, 0.6);
+}
+
+.container {
+  text-align: center;
+}
+
+a {
+  text-decoration: none;
+  color: #03dac5;
+}
+
+header {
+  height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  background-image: url("/img/kansi.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+header h1 {
+  top: 100px;
+  font-size: 3rem;
+  padding: 50px;
+  background: #393838;
+  color: #ff0266;
+  border-radius: 20%;
 }
 /*# sourceMappingURL=tyyli.css.map */
