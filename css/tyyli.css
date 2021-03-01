@@ -1,3 +1,4 @@
+@charset "UTF-8";
 * {
   margin: 0;
   padding: 0;
@@ -60,6 +61,14 @@ header #mode {
   padding: 20px;
   border-radius: 50%;
   background-color: #bb86fc;
+}
+
+.pörssi {
+  background-color: #03dac5;
+  width: 100px;
+  height: 100px;
+  color: pink;
+  border-radius: 50%;
 }
 
 .kortti {
@@ -238,7 +247,7 @@ footer {
     font-family: "Nunito", sans-serif;
   }
   .name {
-    font-size: 0.5rem;
+    font-size: 0.7rem;
     left: 40px;
     bottom: 35px;
   }
