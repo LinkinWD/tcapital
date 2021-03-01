@@ -1,9 +1,12 @@
-const tummaBtn = document.querySelector('#tumma')
-const vaaleaBtn = document.querySelector('#vaalea')
+const mode = document.querySelector('#mode')
+const sektiot = document.querySelectorAll('section')
 
-tummaBtn.addEventListener('click', () => {
-    document.body.classList.add('tumma')
-})
-vaaleaBtn.addEventListener('click', () => {
-    document.body.classList.remove('tumma')
+
+
+mode.addEventListener('click', () => {
+    document.body.classList.toggle('tumma')
+    for( let yksi of sektiot) {
+        yksi.classList.toggle('tumma')
+        console.log(yksi)
+    }
 })

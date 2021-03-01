@@ -1,33 +1,20 @@
-$vaalea-bg: #ece5e5;
-$tumma-bg: #393838;
+$transition-time: 0.3s;
 $prim-purple: #bb86fc;
 $prim-green: #03dac5;
 $prim-blue: #3700b3;
 $prim-pink: #ff7597;
 $prim-red: #ff0266;
-
-@mixin vaalea-varjo-koholla {
+$color: black;
+@mixin varjo-koholla {
 	border-radius: 50px;
 	background: #e2dada;
 	box-shadow: 20px 20px 60px #c0b9b9, -20px -20px 60px #fffbfb;
 }
 
-@mixin vaalea-varjo-painunut {
+@mixin varjo-painunut {
 	border-radius: 50px;
 	background: #e2dada;
 	box-shadow: inset 20px 20px 60px #c0b9b9, inset -20px -20px 60px #fffbfb;
-}
-
-@mixin tumma-varjo-koholla {
-	border-radius: 50px;
-	background: #393838;
-	box-shadow: 20px 20px 60px #303030, -20px -20px 60px #424040;
-}
-
-@mixin tumma-varjo-painunut {
-	border-radius: 50px;
-	background: #393838;
-	box-shadow: inset 20px 20px 60px #303030, inset -20px -20px 60px #424040;
 }
 
 * {
@@ -37,12 +24,12 @@ $prim-red: #ff0266;
 }
 
 body {
-	background: $vaalea-bg;
-	color: $tumma-bg;
+	background: whitesmoke;
+	color: black;
 	font-family: 'Montserrat', sans-serif;
 }
 body.tumma {
-	background: $tumma-bg;
+	background: black;
 	color: rgba($color: #ffffff, $alpha: 0.6);
 }
 
@@ -56,20 +43,211 @@ a {
 }
 
 header {
-	height: 100vh;
+	margin-top: 20px;
+	height: 10vh;
 	display: flex;
 	justify-content: space-between;
-	flex-direction: column;
+	flex-direction: row;
+	align-items: center;
 	background-image: url("/img/kansi.jpg");
 	background-position: center;
 	background-repeat: no-repeat;
+	img {
+		width: 50px;
+		margin: 30px;
+	}
+	h2 {
+		font-weight: 700;
+	}
+	#mode {
+		margin-right: 40px;
+		padding: 20px;
+		border-radius: 50%;
+		background-color: $prim-purple;
+	}
+}
+.kortti {
+	height: 90vh;
+}
 
-	h1 {
-		top: 100px;
-		font-size: 3rem;
-		padding: 50px;
-		background: $tumma-bg;
+.card-group {
+	position: absolute;
+	top: 50%;
+	left: 10%;
+	transform: translate(-50%, -50%);
+	transform: rotate(15deg);
+}
+
+.card {
+	position: relative;
+	height: 189px;
+	width: 315px;
+	border-radius: 25px;
+	background: rgba(255, 255, 255, 0.2);
+	backdrop-filter: blur(30px); /* This will produce the blur */
+	border: 2px solid rgba(255, 255, 255, 0.1);
+	box-shadow: 0 0 80px rgba(0, 0, 0, 0.2);
+	overflow: hidden;
+}
+
+.logo img,
+.chip img,
+.number,
+.name,
+.from,
+.to,
+.ring {
+	position: absolute; /* All items inside card should have absolute position */
+}
+
+.logo img {
+	top: 35px;
+	right: 40px;
+	width: 80px;
+	height: auto;
+	opacity: 0.8;
+}
+
+.chip img {
+	top: 84px;
+	left: 28px;
+	width: 35px;
+	height: auto;
+	opacity: 0.8;
+}
+
+.number,
+.name,
+.from,
+.to {
+	color: rgba(255, 255, 255, 0.8);
+	font-weight: 400;
+	letter-spacing: 2px;
+	text-shadow: 0 0 2px rgba(0, 0, 0, 0.6);
+}
+
+.number {
+	left: 28px;
+	bottom: 46px;
+	font-family: "Nunito", sans-serif;
+}
+
+.name {
+	font-size: 0.7rem;
+	left: 28px;
+	bottom: 25px;
+}
+
+.from {
+	font-size: 0.5rem;
+	bottom: 25px;
+	right: 77px;
+}
+
+.to {
+	font-size: 0.5rem;
+	bottom: 25px;
+	right: 28px;
+}
+
+section {
+	margin-top: 30px;
+	margin-left: 20px;
+	margin-right: 20px;
+	h2 {
+		margin-bottom: 20px;
+	}
+	i {
+		font-size: 2rem;
+		margin-bottom: 10px;
+		color: $prim-green;
+	}
+	p {
+		margin-bottom: 10px;
+	}
+	a {
+		margin-bottom: 10px;
+	}
+}
+section.tumma {
+	i {
 		color: $prim-red;
-		border-radius: 20%;
+	}
+}
+
+footer {
+	margin-top: 20px;
+}
+
+@media screen and (min-width: 900px) {
+	.card {
+		position: relative;
+		height: 270px;
+		width: 450px;
+		border-radius: 25px;
+		background: rgba(255, 255, 255, 0.2);
+		backdrop-filter: blur(30px); /* This will produce the blur */
+		border: 2px solid rgba(255, 255, 255, 0.1);
+		box-shadow: 0 0 80px rgba(0, 0, 0, 0.2);
+		overflow: hidden;
+	}
+	.logo img,
+	.chip img,
+	.number,
+	.name,
+	.from,
+	.to,
+	.ring {
+		position: absolute; /* All items inside card should have absolute position */
+	}
+
+	.logo img {
+		top: 35px;
+		right: 40px;
+		width: 80px;
+		height: auto;
+		opacity: 0.8;
+	}
+
+	.chip img {
+		top: 120px;
+		left: 40px;
+		width: 50px;
+		height: auto;
+		opacity: 0.8;
+	}
+
+	.number,
+	.name,
+	.from,
+	.to {
+		color: rgba(255, 255, 255, 0.8);
+		font-weight: 400;
+		letter-spacing: 2px;
+		text-shadow: 0 0 2px rgba(0, 0, 0, 0.6);
+	}
+
+	.number {
+		left: 40px;
+		bottom: 65px;
+		font-family: "Nunito", sans-serif;
+	}
+
+	.name {
+		font-size: 0.5rem;
+		left: 40px;
+		bottom: 35px;
+	}
+
+	.from {
+		font-size: 0.5rem;
+		bottom: 35px;
+		right: 110px;
+	}
+
+	.to {
+		font-size: 0.5rem;
+		bottom: 35px;
+		right: 40px;
 	}
 }
