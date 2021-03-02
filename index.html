@@ -22,24 +22,34 @@
                     <img src="img/tc_logo60.png" alt="logo">
                     <h2>Tannerkoski Capital</h2>
                
-                    <button id="mode">mode</button>
+                    <label class="label">
+                        <div class="toggle tumma">
+                          <input class="toggle-state" type="checkbox" name="check" value="check" />
+                          <div class="indicator"></div>
+                        </div>
+                        <div class="label-text">Mode</div>
+                      </label>
                     
               
                 
             </header>
            
             <div class="kortti">
-                <div class="pörssi">vittu</div>
-            <div class="card-group">
-                <div class="card">
-                  <div class="logo"><img src="img/Visa-Logo-PNG-Image.png" alt="Visa"></div>
-                  <div class="chip"><img src="img/chip.png" alt="chip"></div>
-                  <div class="number">1234 5678 9012 3456</div>
-                  <div class="name">Tannerkoski Capital</div>
-                  <div class="from">10/19</div>
-                  <div class="to">06/21</div>
-                </div>
-              </div>
+                <div class="grid">
+                    
+                    <div class="pörssi">vittu</div>
+                    
+                    <div class="card-group">
+                        <div class="card">
+                        <div class="logo"><img src="img/Visa-Logo-PNG-Image.png" alt="Visa"></div>
+                        <div class="chip"><img src="img/chip.png" alt="chip"></div>
+                        <div class="number">1234 5678 9012 3456</div>
+                        <div class="name">Tannerkoski Capital</div>
+                        <div class="from">10/19</div>
+                        <div class="to">06/21</div>
+                        </div>
+                    </div>
+                </div>    
             </div>
             <section>
                 <h2>Palvelumme</h2>
@@ -76,7 +86,18 @@
                 <h4>Osoitteemme:</h4>
                 <p>Miestentie 5-9,
                     02150 Espoo</p>
-                <a href="https://goo.gl/maps/6SdTJu8F11DP4qi96">Näytä kartalta</a>
+                    <p>
+                        
+                        <button class="btn btn-primary" type="button" data-bs-toggle="collapse" data-bs-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
+                          Näytä kartalta
+                        </button>
+                      </p>
+                      <div class="collapse" id="collapseExample">
+                        <div class="card card-body">
+                            <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d15873.591196033112!2d24.8223113!3d60.17744!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x468df58db76781a5%3A0x9c0ab7d99fd451a7!2sMiestentie%205-9%2C%2002150%20Espoo!5e0!3m2!1sfi!2sfi!4v1614679741195!5m2!1sfi!2sfi" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                        </div>
+                      </div>
+                
                 <h4>Olemmme tavoitavissa:</h4>
                 <p>Ma – Pe, 8:00-18:00</p>
                 <h4>Myös puhelimitse:</h4>
