@@ -7,7 +7,7 @@
 }
 
 body {
-  background: whitesmoke;
+  background: #e3f2fd;
   color: black;
   font-family: 'Montserrat', sans-serif;
   -webkit-transition: 0.5s;
@@ -41,6 +41,10 @@ header {
           align-items: center;
   background-position: center;
   background-repeat: no-repeat;
+  border-radius: 20px;
+  background: #e3f2fd;
+  -webkit-box-shadow: 27px 27px 54px #8a949a, -27px -27px 54px #ffffff;
+          box-shadow: 27px 27px 54px #8a949a, -27px -27px 54px #ffffff;
 }
 
 header img {
@@ -48,7 +52,7 @@ header img {
   margin: 30px;
 }
 
-header h2 {
+header h5 {
   font-weight: 700;
 }
 
@@ -72,7 +76,7 @@ header #mode {
 }
 
 .label-text {
-  margin-left: 16px;
+  margin-right: 16px;
 }
 
 .toggle {
@@ -80,6 +84,7 @@ header #mode {
   position: relative;
   height: 30px;
   width: 60px;
+  margin-right: 20px;
   border-radius: 15px;
   overflow: hidden;
   -webkit-box-shadow: -8px -4px 8px 0px #ffffff, 8px 4px 12px 0px #d1d9e6, 4px 4px 4px 0px #d1d9e6 inset, -4px -4px 4px 0px #ffffff inset;
@@ -112,18 +117,15 @@ header #mode {
 
 /* Visa kortti */
 .kortti {
-  height: 90vh;
+  height: 60vh;
 }
 
 .grid {
   position: relative;
   margin-top: 15vh;
-  height: 50vh;
-  background-image: url(/img/grid.svg);
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  border: 2px solid red;
+  height: 40vh;
+  background: #1e88e5;
+  background: radial-gradient(circle, #1e88e5 0%, #e3f2fd 59%);
 }
 
 .grid .pörssi {
@@ -191,7 +193,7 @@ header #mode {
 .name,
 .from,
 .to {
-  color: rgba(255, 255, 255, 0.8);
+  color: rgba(0, 0, 0, 0.8);
   font-weight: 400;
   letter-spacing: 2px;
   text-shadow: 0 0 2px rgba(0, 0, 0, 0.6);
@@ -221,6 +223,7 @@ header #mode {
   right: 28px;
 }
 
+/* sectionit alkaa */
 section {
   margin-top: 30px;
   margin-left: 20px;
@@ -229,6 +232,7 @@ section {
 
 section h2 {
   margin-bottom: 20px;
+  padding: 10px;
 }
 
 section i {
@@ -239,13 +243,86 @@ section i {
 
 section p {
   margin-bottom: 10px;
+  padding: 10px;
 }
 
 section a {
   margin-bottom: 10px;
+  padding: 10px;
 }
 
-footer {
+section #palvelumme {
+  border-radius: 20px;
+  background: #e3f2fd;
+  -webkit-box-shadow: 27px 27px 54px #8a949a, -27px -27px 54px #ffffff;
+          box-shadow: 27px 27px 54px #8a949a, -27px -27px 54px #ffffff;
+}
+
+section #lupauksemme {
+  border-radius: 20px;
+  background: #e3f2fd;
+  -webkit-box-shadow: 27px 27px 54px #8a949a, -27px -27px 54px #ffffff;
+          box-shadow: 27px 27px 54px #8a949a, -27px -27px 54px #ffffff;
+}
+
+section form {
+  display: inline-block;
+  height: 500px;
+}
+
+section .field {
+  padding-top: 10px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+section .field label {
+  padding-left: 5px;
+  -webkit-transition: all 0.3s ease-in;
+  transition: all 0.3s ease-in;
+  -webkit-transform: translateY(-20px);
+          transform: translateY(-20px);
+  pointer-events: none;
+  opacity: 0.83;
+}
+
+section .field input,
+section .field textarea {
+  border-radius: 5px;
+  border: none;
+}
+
+section .field input:focus {
+  border-bottom: 2px solid black;
+}
+
+section .field input:focus + label {
+  -webkit-transform: translateY(-1px);
+          transform: translateY(-1px);
+  -webkit-transform: scale(1.4);
+          transform: scale(1.4);
+  opacity: 1;
+}
+
+section .field textarea:focus,
+section .field input:focus {
+  outline: none;
+}
+
+section .field textarea:focus + label {
+  -webkit-transform: translateY(-270px);
+          transform: translateY(-270px);
+  -webkit-transform: scale(1.4);
+          transform: scale(1.4);
+  opacity: 1;
+}
+
+section footer {
   margin-top: 20px;
 }
 

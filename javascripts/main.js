@@ -15,7 +15,7 @@ check.addEventListener('click', () => {
   alert('hei')
 }) */
 
-anime({
+/* anime({
     targets: '.pörssi',
     keyframes: [
       {translateX: 40, translateY: 40},
@@ -30,3 +30,4 @@ anime({
     easing: 'easeOutElastic(1, .8)',
     loop: true
   });
+ */

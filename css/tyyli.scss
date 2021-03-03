@@ -1,18 +1,19 @@
 $transition-time: 0.5s;
+$bg-color: #e3f2fd;
 $prim-purple: #bb86fc;
 $prim-green: #03dac5;
 $prim-blue: #3700b3;
 $prim-pink: #ff7597;
 $prim-red: #ff0266;
-$color: black;
+$color: #2f2828;
 @mixin varjo-koholla {
-	border-radius: 50px;
-	background: #e2dada;
-	box-shadow: 20px 20px 60px #c0b9b9, -20px -20px 60px #fffbfb;
+	border-radius: 20px;
+	background: #e3f2fd;
+	box-shadow: 27px 27px 54px #8a949a, -27px -27px 54px #ffffff;
 }
 
 @mixin varjo-painunut {
-	border-radius: 50px;
+	border-radius: 20px;
 	background: #e2dada;
 	box-shadow: inset 20px 20px 60px #c0b9b9, inset -20px -20px 60px #fffbfb;
 }
@@ -24,7 +25,7 @@ $color: black;
 }
 
 body {
-	background: whitesmoke;
+	background: $bg-color;
 	color: black;
 	font-family: 'Montserrat', sans-serif;
 	transition: $transition-time;
@@ -49,11 +50,12 @@ header {
 
 	background-position: center;
 	background-repeat: no-repeat;
+	@include varjo-koholla();
 	img {
 		width: 50px;
 		margin: 30px;
 	}
-	h2 {
+	h5 {
 		font-weight: 700;
 	}
 	#mode {
@@ -73,7 +75,7 @@ header {
 }
 
 .label-text {
-	margin-left: 16px;
+	margin-right: 16px;
 }
 
 .toggle {
@@ -81,6 +83,7 @@ header {
 	position: relative;
 	height: 30px;
 	width: 60px;
+	margin-right: 20px;
 	border-radius: 15px;
 	overflow: hidden;
 	box-shadow: -8px -4px 8px 0px #ffffff, 8px 4px 12px 0px #d1d9e6, 4px 4px 4px 0px #d1d9e6 inset,
@@ -107,19 +110,15 @@ header {
 
 /* Visa kortti */
 .kortti {
-	height: 90vh;
+	height: 60vh;
 }
 
 .grid {
 	position: relative;
 	margin-top: 15vh;
-	height: 50vh;
-	background-image: url(/img/grid.svg);
-	background-position: center;
-	background-repeat: no-repeat;
-	background-size: cover;
-	border: 2px solid red;
-
+	height: 40vh;
+	background: rgb(30, 136, 229);
+	background: radial-gradient(circle, rgba(30, 136, 229, 1) 0%, rgba(227, 242, 253, 1) 59%);
 	.pörssi {
 		position: absolute;
 		background-color: $prim-green;
@@ -180,7 +179,7 @@ header {
 .name,
 .from,
 .to {
-	color: rgba(255, 255, 255, 0.8);
+	color: rgba(0, 0, 0, 0.8);
 	font-weight: 400;
 	letter-spacing: 2px;
 	text-shadow: 0 0 2px rgba(0, 0, 0, 0.6);
@@ -210,12 +209,15 @@ header {
 	right: 28px;
 }
 
+/* sectionit alkaa */
 section {
 	margin-top: 30px;
 	margin-left: 20px;
 	margin-right: 20px;
+
 	h2 {
 		margin-bottom: 20px;
+		padding: 10px;
 	}
 	i {
 		font-size: 2rem;
@@ -224,13 +226,61 @@ section {
 	}
 	p {
 		margin-bottom: 10px;
+		padding: 10px;
 	}
 	a {
 		margin-bottom: 10px;
+		padding: 10px;
+	}
+	#palvelumme {
+		@include varjo-koholla();
+	}
+	#tietoa-meistä {
+	}
+	#lupauksemme {
+		@include varjo-koholla();
+	}
+	form {
+		display: inline-block;
+		height: 500px;
+	}
+	.field {
+		padding-top: 10px;
+		display: flex;
+		flex-direction: column;
+		label {
+			padding-left: 5px;
+			transition: all 0.3s ease-in;
+			transform: translateY(-20px);
+			pointer-events: none;
+			opacity: 0.83;
+		}
+		input,
+		textarea {
+			border-radius: 5px;
+			border: none;
+		}
+		input:focus {
+			border-bottom: 2px solid black;
+		}
+		input:focus + label {
+			transform: translateY(-1px);
+			transform: scale(1.4);
+			opacity: 1;
+		}
+		textarea:focus,
+		input:focus {
+			outline: none;
+		}
+		textarea:focus + label {
+			transform: translateY(-270px);
+			transform: scale(1.4);
+			opacity: 1;
+		}
 	}
 }
 
-footer {
+section footer {
 	margin-top: 20px;
 }
 
