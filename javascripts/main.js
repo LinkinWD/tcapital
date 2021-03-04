@@ -2,6 +2,12 @@ const mode = document.querySelector('#mode')
 const sektiot = document.querySelectorAll('section')
 const check = document.querySelector('input[name="check"]')
 const toggle = document.querySelector('.toggle')
+const nav = document.querySelector('.navbar')
+const header = document.querySelector('#header')
+const palvelumme = document.querySelector('#palvelumme')
+const lupaus = document.querySelector('#lupauksemme')
+const grid = document.querySelector('.grid')
+const labels = document.querySelectorAll('label')
 
 check.addEventListener('click', () => {
   document.body.classList.toggle('tumma')
@@ -10,6 +16,14 @@ check.addEventListener('click', () => {
       
   }
   toggle.classList.toggle('tumma')
+  header.classList.toggle('tumma')
+  palvelumme.classList.toggle('tumma')
+  lupaus.classList.toggle('tumma')
+  grid.classList.toggle('tumma')
+  for( let yksi of labels) {
+    yksi.classList.toggle('tumma')
+    
+}
 })
 /* check.addEventListener('click', () => {
   alert('hei')
@@ -31,3 +45,13 @@ check.addEventListener('click', () => {
     loop: true
   });
  */
+window.onscroll = function() {scrolli()}
+
+function scrolli() {
+  if (document.body.scrollTop > 700 || document.documentElement.scrollTop > 700) {
+    nav.classList.remove('piilota');
+  }
+  else if (document.body.scrollTop < 700 || document.documentElement.scrollTop < 700) {
+    nav.classList.add('piilota');
+  }
+}

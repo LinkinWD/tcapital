@@ -1,4 +1,4 @@
-$transition-time: 0.5s;
+$transition-time: 0.3s;
 $bg-color: #e3f2fd;
 $prim-purple: #bb86fc;
 $prim-green: #03dac5;
@@ -6,10 +6,16 @@ $prim-blue: #3700b3;
 $prim-pink: #ff7597;
 $prim-red: #ff0266;
 $color: #2f2828;
+$prim-tumma: #2f2828;
 @mixin varjo-koholla {
 	border-radius: 20px;
 	background: #e3f2fd;
 	box-shadow: 27px 27px 54px #8a949a, -27px -27px 54px #ffffff;
+}
+@mixin varjo-koholla-tumma {
+	border-radius: 20px;
+	background: #2f2828;
+	box-shadow: 27px 27px 54px #262020, -27px -27px 54px #383030;
 }
 
 @mixin varjo-painunut {
@@ -29,6 +35,20 @@ body {
 	color: black;
 	font-family: 'Montserrat', sans-serif;
 	transition: $transition-time;
+}
+/* navbar */
+.navbar {
+	margin: 0;
+	padding: 0;
+	.container-fluid {
+		background: rgba(76, 175, 80, 0.3);
+	}
+	img {
+		width: 70%;
+	}
+	button {
+		background: $prim-purple;
+	}
 }
 
 .container {
@@ -110,7 +130,7 @@ header {
 
 /* Visa kortti */
 .kortti {
-	height: 60vh;
+	height: 50vh;
 }
 
 .grid {
@@ -208,10 +228,25 @@ header {
 	bottom: 25px;
 	right: 28px;
 }
+/* buttonit */
+.btn {
+	border-radius: 500px;
+}
+#special {
+	height: 100px;
+	width: 100px;
+	border-radius: 51% 49% 47% 53% / 17% 17% 83% 83%;
+}
+.btn-group {
+	.btn {
+		border-radius: 0;
+		font-size: 0.8rem;
+	}
+}
 
 /* sectionit alkaa */
 section {
-	margin-top: 30px;
+	margin-top: 60px;
 	margin-left: 20px;
 	margin-right: 20px;
 
@@ -234,11 +269,18 @@ section {
 	}
 	#palvelumme {
 		@include varjo-koholla();
+		img {
+			max-width: 70%;
+		}
 	}
-	#tietoa-meistä {
-	}
+
 	#lupauksemme {
 		@include varjo-koholla();
+	}
+	#yhteystiedot {
+		img {
+			max-width: 70%;
+		}
 	}
 	form {
 		display: inline-block;
@@ -251,7 +293,7 @@ section {
 		label {
 			padding-left: 5px;
 			transition: all 0.3s ease-in;
-			transform: translateY(-20px);
+			transform: translateY(-28px);
 			pointer-events: none;
 			opacity: 0.83;
 		}
@@ -259,6 +301,7 @@ section {
 		textarea {
 			border-radius: 5px;
 			border: none;
+			padding: 5px;
 		}
 		input:focus {
 			border-bottom: 2px solid black;
@@ -283,12 +326,28 @@ section {
 section footer {
 	margin-top: 20px;
 }
+/* piilota luokka */
+.piilota {
+	display: none;
+}
 
 /* tummaversio */
 
 body.tumma {
-	background: black;
+	background: $prim-tumma;
 	color: rgba($color: #ffffff, $alpha: 0.6);
+}
+#header.tumma {
+	background: $prim-tumma;
+	@include varjo-koholla-tumma();
+}
+#palvelumme.tumma {
+	background: $prim-tumma;
+	@include varjo-koholla-tumma();
+}
+#lupauksemme.tumma {
+	background: $prim-tumma;
+	@include varjo-koholla-tumma();
 }
 .toggle.tumma {
 	isolation: isolate;
@@ -300,12 +359,20 @@ body.tumma {
 	box-shadow: -8px -4px 8px 0px #000000, 8px 4px 12px 0px #141414, 4px 4px 4px 0px #666668 inset,
 		-4px -4px 4px 0px #0e0d0d inset;
 }
-
+.grid.tumma {
+	background: $prim-tumma;
+	background: radial-gradient(circle, rgba(255, 2, 102, 1) 0%, rgba(47, 40, 40, 1) 69%);
+}
+label.tumma {
+	color: $prim-purple;
+}
 section.tumma {
 	i {
 		color: $prim-red;
 	}
 }
+
+/* mediaqueryt ja isomman version asetukset */
 
 @media screen and (min-width: 900px) {
 	.card {
