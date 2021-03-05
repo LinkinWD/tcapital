@@ -20,8 +20,14 @@ $prim-tumma: #2f2828;
 
 @mixin varjo-painunut {
 	border-radius: 20px;
-	background: #e2dada;
-	box-shadow: inset 20px 20px 60px #c0b9b9, inset -20px -20px 60px #fffbfb;
+	background: #e3f2fd;
+	box-shadow: inset 20px 20px 60px #c1ced7, inset -20px -20px 60px #ffffff;
+}
+
+@mixin varjo-painunut-tumma {
+	border-radius: 20px;
+	background: #2f2828;
+	box-shadow: inset 20px 20px 60px #282222, inset -20px -20px 60px #362e2e;
 }
 
 * {
@@ -59,7 +65,9 @@ a {
 	text-decoration: none;
 	color: $prim-green;
 }
-
+.landing {
+	height: 100vh;
+}
 header {
 	margin-top: 20px;
 	height: 10vh;
@@ -130,13 +138,13 @@ header {
 
 /* Visa kortti */
 .kortti {
-	height: 50vh;
+	height: 40vh;
 }
 
 .grid {
 	position: relative;
-	margin-top: 15vh;
-	height: 40vh;
+	margin-top: 10vh;
+	height: 30vh;
 	background: rgb(30, 136, 229);
 	background: radial-gradient(circle, rgba(30, 136, 229, 1) 0%, rgba(227, 242, 253, 1) 59%);
 	.pörssi {
@@ -233,14 +241,36 @@ header {
 	border-radius: 500px;
 }
 #special {
-	height: 100px;
-	width: 100px;
+	height: 130px;
+	width: 130px;
 	border-radius: 51% 49% 47% 53% / 17% 17% 83% 83%;
+	background: radial-gradient(circle at 65% 15%, white 1px, aqua 3%, darkblue 60%, aqua 100%);
+	a {
+		font-size: 0.8rem;
+		color: white;
+	}
 }
 .btn-group {
+	position: fixed;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	img {
+		width: 25px;
+	}
+	a {
+		color: black;
+	}
+	i {
+		color: black;
+		font-size: 1.5rem;
+	}
 	.btn {
 		border-radius: 0;
-		font-size: 0.8rem;
+		font-size: 0.7rem;
+		background: rgb(227, 242, 253);
+		background: rgb(175, 237, 234);
+		background: linear-gradient(45deg, rgba(175, 237, 234, 1) 0%, rgba(3, 218, 197, 1) 100%);
 	}
 }
 
@@ -323,8 +353,21 @@ section {
 	}
 }
 
-section footer {
-	margin-top: 20px;
+footer {
+	margin: 20px;
+	line-height: 0.8;
+	margin-bottom: 120px;
+	@include varjo-painunut();
+	padding: 10px;
+	h5 {
+		font-weight: 700;
+	}
+	i {
+		font-size: 3rem;
+		color: #18447e;
+		background: white;
+		margin-top: 10px;
+	}
 }
 /* piilota luokka */
 .piilota {
@@ -370,6 +413,9 @@ section.tumma {
 	i {
 		color: $prim-red;
 	}
+}
+footer.tumma {
+	@include varjo-painunut-tumma();
 }
 
 /* mediaqueryt ja isomman version asetukset */

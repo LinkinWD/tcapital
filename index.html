@@ -17,7 +17,7 @@
 </head>
 <body>
     <!-- Navbar -->
-    <nav class="navbar navbar-expand-lg navbar-light bg-light sticky-top">
+    <nav class="navbar navbar-expand-lg navbar-light bg-light sticky-top piilota">
         <div class="container-fluid">
           <a class="navbar-brand" href="#"><img src="img/tc_logo60.png" alt=""></a>
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -47,6 +47,7 @@
       </nav>
 
 <div class="container">
+            <div class="landing">
             <header id="header">
                 
                     <img src="img/tc_logo60.png" alt="logo">
@@ -86,15 +87,19 @@
                 
             </div>
             <div class="navigaatio ">
-                    <button id="special"><a href="#palvelumme">Palvelumme</a></button>
+                    <button id="special"><a href="#palvelumme">Tutustu palveluihimme</a></button>
                     
                     <div class="btn-group mb-5 mt-5" role="group" aria-label="Basic example">
-                        <button type="button" class="btn btn-secondary"><a href="#tietoa-meistä">Tietoa meistä</a></button>
-                        <button type="button" class="btn btn-secondary"><a href="#lupauksemme">Lupauksemme</a></button>
-                        <button type="button" class="btn btn-secondary"><a href="#yhteystiedot">Yhteystiedot</a></button>
+                        <button type="button" class="btn btn-secondary"><a href="#header">koti<i class="fas fa-home"></i></a></button>
+                        <button type="button" class="btn btn-secondary"><a href="#palvelumme">Palvelumme<i class="far fa-handshake"></i></a></button>
+                        <button type="button" class="btn btn-secondary"><a href="#tietoa-meistä">tietoa meistä <img src="img/TCsvg.svg" alt=""></a></button>
+                        
+                        
+                        <button type="button" class="btn btn-secondary"><a href="#yhteystiedot">yhteystiedot<i class="fas fa-id-card"></i></a></button>
                        
                     </div>   
             </div>
+        </div>
             <!-- palvelumme -->
             <section >
                 <div id="palvelumme">
@@ -191,21 +196,22 @@
             </form>
                     </div>
             </Section>
+        
             <footer>
                 <h5>Tannerkoski Capital</h5>
-                <img src="img/tc_logo60.png" alt="logo">
+                <img src="img/tc_logo60.png" alt="logo"><br>
                 <a href="https://www.linkedin.com/company/tannerkoski-capital/about/"><i class="fab fa-linkedin"></i></a>
                 <h5>Yhteystiedot</h5>
-                <p>Osoite:</p>
+                <p><strong>Osoite:</strong></p>
                 <p>Miestentie 5-9, 02150 Espoo</p>
-                <p>Puhelin:</p>
+                <p><strong>Puhelin:</strong></p>
                 <p>+ 358 46 9223595</p>
-                <p>Avoinna:</p>
+                <p><strong>Avoinna:</strong></p>
                 <p>Ma – Pe 8:00-18:00</p>
-                <p>Email</p>
+                <p><strong>Sähköposti:</strong></p>
                 <p>info@tannerkoski.fi</p>
             </footer>
-</div>
+        </div>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js" integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0" crossorigin="anonymous"></script>
 <script src="javascripts/anime.min.js"></script>
     <script src="javascripts/main.js"></script>

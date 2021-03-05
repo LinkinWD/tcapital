@@ -41,6 +41,10 @@ a {
   color: #03dac5;
 }
 
+.landing {
+  height: 100vh;
+}
+
 header {
   margin-top: 20px;
   height: 10vh;
@@ -135,13 +139,13 @@ header #mode {
 
 /* Visa kortti */
 .kortti {
-  height: 50vh;
+  height: 40vh;
 }
 
 .grid {
   position: relative;
-  margin-top: 15vh;
-  height: 40vh;
+  margin-top: 10vh;
+  height: 30vh;
   background: #1e88e5;
   background: radial-gradient(circle, #1e88e5 0%, #e3f2fd 59%);
 }
@@ -247,14 +251,43 @@ header #mode {
 }
 
 #special {
-  height: 100px;
-  width: 100px;
+  height: 130px;
+  width: 130px;
   border-radius: 51% 49% 47% 53% / 17% 17% 83% 83%;
+  background: radial-gradient(circle at 65% 15%, white 1px, aqua 3%, darkblue 60%, aqua 100%);
+}
+
+#special a {
+  font-size: 0.8rem;
+  color: white;
+}
+
+.btn-group {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+
+.btn-group img {
+  width: 25px;
+}
+
+.btn-group a {
+  color: black;
+}
+
+.btn-group i {
+  color: black;
+  font-size: 1.5rem;
 }
 
 .btn-group .btn {
   border-radius: 0;
-  font-size: 0.8rem;
+  font-size: 0.7rem;
+  background: #e3f2fd;
+  background: #afedea;
+  background: linear-gradient(45deg, #afedea 0%, #03dac5 100%);
 }
 
 /* sectionit alkaa */
@@ -365,8 +398,26 @@ section .field textarea:focus + label {
   opacity: 1;
 }
 
-section footer {
-  margin-top: 20px;
+footer {
+  margin: 20px;
+  line-height: 0.8;
+  margin-bottom: 120px;
+  border-radius: 20px;
+  background: #e3f2fd;
+  -webkit-box-shadow: inset 20px 20px 60px #c1ced7, inset -20px -20px 60px #ffffff;
+          box-shadow: inset 20px 20px 60px #c1ced7, inset -20px -20px 60px #ffffff;
+  padding: 10px;
+}
+
+footer h5 {
+  font-weight: 700;
+}
+
+footer i {
+  font-size: 3rem;
+  color: #18447e;
+  background: white;
+  margin-top: 10px;
 }
 
 /* piilota luokka */
@@ -426,6 +477,13 @@ label.tumma {
 
 section.tumma i {
   color: #ff0266;
+}
+
+footer.tumma {
+  border-radius: 20px;
+  background: #2f2828;
+  -webkit-box-shadow: inset 20px 20px 60px #282222, inset -20px -20px 60px #362e2e;
+          box-shadow: inset 20px 20px 60px #282222, inset -20px -20px 60px #362e2e;
 }
 
 /* mediaqueryt ja isomman version asetukset */

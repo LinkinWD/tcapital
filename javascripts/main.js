@@ -8,6 +8,7 @@ const palvelumme = document.querySelector('#palvelumme')
 const lupaus = document.querySelector('#lupauksemme')
 const grid = document.querySelector('.grid')
 const labels = document.querySelectorAll('label')
+const footer = document.querySelector('footer')
 
 check.addEventListener('click', () => {
   document.body.classList.toggle('tumma')
@@ -24,6 +25,7 @@ check.addEventListener('click', () => {
     yksi.classList.toggle('tumma')
     
 }
+  footer.classList.toggle('tumma')
 })
 /* check.addEventListener('click', () => {
   alert('hei')
@@ -45,7 +47,7 @@ check.addEventListener('click', () => {
     loop: true
   });
  */
-window.onscroll = function() {scrolli()}
+/* window.onscroll = function() {scrolli()}
 
 function scrolli() {
   if (document.body.scrollTop > 700 || document.documentElement.scrollTop > 700) {
@@ -55,3 +57,4 @@ function scrolli() {
     nav.classList.add('piilota');
   }
 }
+ */
