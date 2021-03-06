@@ -62,11 +62,10 @@ header {
           align-items: center;
   background-position: center;
   background-repeat: no-repeat;
-  border-radius: 20px;
+  border-radius: 20px 20px 0 0;
   background: #e3f2fd;
   -webkit-box-shadow: 27px 27px 54px #8a949a, -27px -27px 54px #ffffff;
           box-shadow: 27px 27px 54px #8a949a, -27px -27px 54px #ffffff;
-  border-radius: 20px 20px 0 0;
 }
 
 header img {
@@ -245,6 +244,14 @@ header #mode {
   color: #03dac5;
 }
 
+.ml13 {
+  font-weight: 700;
+  font-size: 1.2em;
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+  color: #03dac5;
+}
+
 .ml12 .letter {
   display: inline-block;
   line-height: 1em;
@@ -310,7 +317,7 @@ section a {
 }
 
 section #palvelumme {
-  border-radius: 20px;
+  border-radius: 20px 20px 0 0;
   background: #e3f2fd;
   -webkit-box-shadow: 27px 27px 54px #8a949a, -27px -27px 54px #ffffff;
           box-shadow: 27px 27px 54px #8a949a, -27px -27px 54px #ffffff;
@@ -321,7 +328,7 @@ section #palvelumme img {
 }
 
 section #lupauksemme {
-  border-radius: 20px;
+  border-radius: 20px 20px 0 0;
   background: #e3f2fd;
   -webkit-box-shadow: 27px 27px 54px #8a949a, -27px -27px 54px #ffffff;
           box-shadow: 27px 27px 54px #8a949a, -27px -27px 54px #ffffff;
@@ -389,6 +396,10 @@ section .field textarea:focus + label {
   opacity: 1;
 }
 
+section .tiimi {
+  line-height: 0;
+}
+
 footer {
   margin: 20px;
   line-height: 0.8;
@@ -423,7 +434,7 @@ body.tumma {
 
 #header.tumma {
   background: #2f2828;
-  border-radius: 20px;
+  border-radius: 20px 20px 0 0;
   background: #2f2828;
   -webkit-box-shadow: 27px 27px 54px #262020, -27px -27px 54px #383030;
           box-shadow: 27px 27px 54px #262020, -27px -27px 54px #383030;
@@ -431,7 +442,7 @@ body.tumma {
 
 #palvelumme.tumma {
   background: #2f2828;
-  border-radius: 20px;
+  border-radius: 20px 20px 0 0;
   background: #2f2828;
   -webkit-box-shadow: 27px 27px 54px #262020, -27px -27px 54px #383030;
           box-shadow: 27px 27px 54px #262020, -27px -27px 54px #383030;
@@ -439,7 +450,7 @@ body.tumma {
 
 #lupauksemme.tumma {
   background: #2f2828;
-  border-radius: 20px;
+  border-radius: 20px 20px 0 0;
   background: #2f2828;
   -webkit-box-shadow: 27px 27px 54px #262020, -27px -27px 54px #383030;
           box-shadow: 27px 27px 54px #262020, -27px -27px 54px #383030;

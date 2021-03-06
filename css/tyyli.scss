@@ -8,12 +8,12 @@ $prim-red: #ff0266;
 $color: #2f2828;
 $prim-tumma: #2f2828;
 @mixin varjo-koholla {
-	border-radius: 20px;
+	border-radius: 20px 20px 0 0;
 	background: #e3f2fd;
 	box-shadow: 27px 27px 54px #8a949a, -27px -27px 54px #ffffff;
 }
 @mixin varjo-koholla-tumma {
-	border-radius: 20px;
+	border-radius: 20px 20px 0 0;
 	background: #2f2828;
 	box-shadow: 27px 27px 54px #262020, -27px -27px 54px #383030;
 }
@@ -79,7 +79,7 @@ header {
 	background-position: center;
 	background-repeat: no-repeat;
 	@include varjo-koholla();
-	border-radius: 20px 20px 0 0;
+
 	img {
 		width: 50px;
 		margin: 30px;
@@ -231,6 +231,7 @@ header {
 	right: 28px;
 }
 /* tervetuloa */
+
 .ml12 {
 	margin-top: 100px;
 	font-weight: 700;
@@ -239,7 +240,13 @@ header {
 	letter-spacing: 0.2em;
 	color: $prim-green;
 }
-
+.ml13 {
+	font-weight: 700;
+	font-size: 1.2em;
+	text-transform: uppercase;
+	letter-spacing: 0.2em;
+	color: $prim-green;
+}
 .ml12 .letter {
 	display: inline-block;
 	line-height: 1em;
@@ -349,6 +356,9 @@ section {
 			transform: scale(1.4);
 			opacity: 1;
 		}
+	}
+	.tiimi {
+		line-height: 0;
 	}
 }
 

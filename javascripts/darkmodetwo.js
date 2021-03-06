@@ -5,10 +5,10 @@ const sektiot = document.querySelectorAll('section')
 const check = document.querySelector('input[name="check"]')
 const toggle = document.querySelector('.toggle')
 const header = document.querySelector('#header')
-const palvelumme = document.querySelector('#palvelumme')
-const lupaus = document.querySelector('#lupauksemme')
-const grid = document.querySelector('.grid')
-const labels = document.querySelectorAll('label')
+
+
+
+
 const footer = document.querySelector('footer')
 
 
@@ -22,13 +22,7 @@ const tummaMoodiPäälle = () => {
     }
     toggle.classList.add('tumma')
     header.classList.add('tumma')
-    palvelumme.classList.add('tumma')
-    lupaus.classList.add('tumma')
-    grid.classList.add('tumma')
-    for( let yksi of labels) {
-      yksi.classList.add('tumma')
-      
-  }
+    
  
     footer.classList.add('tumma')
     
@@ -48,14 +42,7 @@ const tummaMoodiPois = () => {
 
   toggle.classList.remove('tumma')
   header.classList.remove('tumma')
-  palvelumme.classList.remove('tumma')
-  lupaus.classList.remove('tumma')
-  grid.classList.remove('tumma')
-  for( let yksi of labels) {
-    yksi.classList.remove('tumma')  
-    }
-
-    
+  
     footer.classList.remove('tumma')
    
     
