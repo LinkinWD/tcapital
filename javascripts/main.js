@@ -1,32 +1,4 @@
-const mode = document.querySelector('#mode')
-const sektiot = document.querySelectorAll('section')
-const check = document.querySelector('input[name="check"]')
-const toggle = document.querySelector('.toggle')
-const nav = document.querySelector('.navbar')
-const header = document.querySelector('#header')
-const palvelumme = document.querySelector('#palvelumme')
-const lupaus = document.querySelector('#lupauksemme')
-const grid = document.querySelector('.grid')
-const labels = document.querySelectorAll('label')
-const footer = document.querySelector('footer')
 
-check.addEventListener('click', () => {
-  document.body.classList.toggle('tumma')
-  for( let yksi of sektiot) {
-      yksi.classList.toggle('tumma')
-      
-  }
-  toggle.classList.toggle('tumma')
-  header.classList.toggle('tumma')
-  palvelumme.classList.toggle('tumma')
-  lupaus.classList.toggle('tumma')
-  grid.classList.toggle('tumma')
-  for( let yksi of labels) {
-    yksi.classList.toggle('tumma')
-    
-}
-  footer.classList.toggle('tumma')
-})
 /* check.addEventListener('click', () => {
   alert('hei')
 }) */
@@ -60,7 +32,7 @@ function scrolli() {
  */
 
 // Wrap every letter in a span
-var textWrapper = document.querySelector('.ml12');
+const textWrapper = document.querySelector('.ml12');
 textWrapper.innerHTML = textWrapper.textContent.replace(/\S/g, "<span class='letter'>$&</span>");
 
 anime.timeline({loop: false})
