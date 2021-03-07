@@ -1,3 +1,4 @@
+@charset "UTF-8";
 * {
   margin: 0;
   padding: 0;
@@ -74,6 +75,7 @@ header img {
 }
 
 header h5 {
+  font-size: clamp(1rem, 2vw, 2rem);
   font-weight: 700;
 }
 
@@ -144,14 +146,16 @@ header #mode {
 .grid {
   position: relative;
   height: 40vh;
+  width: auto;
   background: #e3f2fd;
-  background: radial-gradient(circle, #10c97c 0%, RGBA(227, 242, 253, 1) 69%);
 }
 
 .card-group {
   position: absolute;
   top: 45%;
-  left: 5%;
+  margin-top: -40px;
+  left: 50%;
+  margin-left: -165px;
   -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
   -webkit-transform: rotate(15deg);
@@ -234,11 +238,11 @@ header #mode {
   right: 28px;
 }
 
-/* tervetuloa */
+/* tervetuloa animaatiot */
 .ml12 {
   margin-top: 100px;
   font-weight: 700;
-  font-size: 1.8em;
+  font-size: clamp(1.8em, 3.5vw, 3em);
   text-transform: uppercase;
   letter-spacing: 0.2em;
   color: #03dac5;
@@ -246,7 +250,7 @@ header #mode {
 
 .ml13 {
   font-weight: 700;
-  font-size: 1.2em;
+  font-size: clamp(1.2em, 2.5vw, 2.5em);
   text-transform: uppercase;
   letter-spacing: 0.2em;
   color: #03dac5;
@@ -255,6 +259,12 @@ header #mode {
 .ml12 .letter {
   display: inline-block;
   line-height: 1em;
+}
+
+.nappi {
+  font-size: clamp(1.2em, 2.5vw, 2em);
+  font-weight: 700;
+  color: rgba(0, 0, 0, 0.6);
 }
 
 /* buttonit */
@@ -317,10 +327,11 @@ section a {
 }
 
 section #palvelumme {
-  border-radius: 20px 20px 0 0;
+  border-radius: 20px;
   background: #e3f2fd;
   -webkit-box-shadow: 27px 27px 54px #8a949a, -27px -27px 54px #ffffff;
           box-shadow: 27px 27px 54px #8a949a, -27px -27px 54px #ffffff;
+  border-radius: 20px;
 }
 
 section #palvelumme img {
@@ -328,7 +339,7 @@ section #palvelumme img {
 }
 
 section #lupauksemme {
-  border-radius: 20px 20px 0 0;
+  border-radius: 20px;
   background: #e3f2fd;
   -webkit-box-shadow: 27px 27px 54px #8a949a, -27px -27px 54px #ffffff;
           box-shadow: 27px 27px 54px #8a949a, -27px -27px 54px #ffffff;
@@ -336,6 +347,10 @@ section #lupauksemme {
 
 section #yhteystiedot img {
   max-width: 70%;
+}
+
+section #yhteystiedot p {
+  line-height: 0;
 }
 
 section form {
@@ -442,7 +457,7 @@ body.tumma {
 
 #palvelumme.tumma {
   background: #2f2828;
-  border-radius: 20px 20px 0 0;
+  border-radius: 20px;
   background: #2f2828;
   -webkit-box-shadow: 27px 27px 54px #262020, -27px -27px 54px #383030;
           box-shadow: 27px 27px 54px #262020, -27px -27px 54px #383030;
@@ -450,7 +465,7 @@ body.tumma {
 
 #lupauksemme.tumma {
   background: #2f2828;
-  border-radius: 20px 20px 0 0;
+  border-radius: 20px;
   background: #2f2828;
   -webkit-box-shadow: 27px 27px 54px #262020, -27px -27px 54px #383030;
           box-shadow: 27px 27px 54px #262020, -27px -27px 54px #383030;
@@ -469,7 +484,6 @@ body.tumma {
 
 .grid.tumma {
   background: #2f2828;
-  background: radial-gradient(circle, #ff0266 0%, #2f2828 69%);
 }
 
 label.tumma {
@@ -488,7 +502,22 @@ footer.tumma {
 }
 
 /* mediaqueryt ja isomman version asetukset */
-@media screen and (min-width: 900px) {
+@media screen and (min-width: 992px) {
+  #tietoa-meistä img {
+    margin-top: 20%;
+  }
+}
+
+@media screen and (min-width: 992px) {
+  .btn-warning {
+    padding-left: 50px;
+    padding-right: 50px;
+  }
+  .card-group {
+    left: 50%;
+    margin-left: -205px;
+    margin-top: -90px;
+  }
   .card {
     position: relative;
     height: 270px;
@@ -531,7 +560,7 @@ footer.tumma {
   .name,
   .from,
   .to {
-    color: rgba(255, 255, 255, 0.8);
+    color: rgba(0, 0, 0, 0.8);
     font-weight: 400;
     letter-spacing: 2px;
     text-shadow: 0 0 2px rgba(0, 0, 0, 0.6);
@@ -555,6 +584,29 @@ footer.tumma {
     font-size: 0.5rem;
     bottom: 35px;
     right: 40px;
+  }
+  #palvelumme {
+    height: 100%;
+    padding: 50px;
+    /* 	p {
+			margin-left: 20px;
+			margin-right: 20px;
+		} */
+  }
+  #palvelumme img {
+    width: 100%;
+    margin-top: 20%;
+  }
+  #tietoa-meistä img {
+    margin-top: 50px;
+    width: 70%;
+  }
+  #lupauksemme {
+    margin-left: 200px;
+    margin-right: 200px;
+  }
+  #yhteystiedot img {
+    margin-top: 50px;
   }
 }
 /*# sourceMappingURL=tyyli.css.map */

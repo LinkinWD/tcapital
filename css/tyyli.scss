@@ -8,12 +8,12 @@ $prim-red: #ff0266;
 $color: #2f2828;
 $prim-tumma: #2f2828;
 @mixin varjo-koholla {
-	border-radius: 20px 20px 0 0;
+	border-radius: 20px;
 	background: #e3f2fd;
 	box-shadow: 27px 27px 54px #8a949a, -27px -27px 54px #ffffff;
 }
 @mixin varjo-koholla-tumma {
-	border-radius: 20px 20px 0 0;
+	border-radius: 20px;
 	background: #2f2828;
 	box-shadow: 27px 27px 54px #262020, -27px -27px 54px #383030;
 }
@@ -78,13 +78,16 @@ header {
 
 	background-position: center;
 	background-repeat: no-repeat;
-	@include varjo-koholla();
+	border-radius: 20px 20px 0 0;
+	background: #e3f2fd;
+	box-shadow: 27px 27px 54px #8a949a, -27px -27px 54px #ffffff;
 
 	img {
 		width: 50px;
 		margin: 30px;
 	}
 	h5 {
+		font-size: clamp(1rem, 2vw, 2rem);
 		font-weight: 700;
 	}
 	#mode {
@@ -145,16 +148,16 @@ header {
 .grid {
 	position: relative;
 	height: 40vh;
-
+	width: auto;
 	background: $bg-color;
-
-	background: radial-gradient(circle, rgb(16, 201, 124) 0%, RGBA(227, 242, 253, 1) 69%);
 }
 
 .card-group {
 	position: absolute;
 	top: 45%;
-	left: 5%;
+	margin-top: -40px;
+	left: 50%;
+	margin-left: -165px;
 	transform: translate(-50%, -50%);
 	transform: rotate(15deg);
 }
@@ -230,19 +233,19 @@ header {
 	bottom: 25px;
 	right: 28px;
 }
-/* tervetuloa */
+/* tervetuloa animaatiot */
 
 .ml12 {
 	margin-top: 100px;
 	font-weight: 700;
-	font-size: 1.8em;
+	font-size: clamp(1.8em, 3.5vw, 3em);
 	text-transform: uppercase;
 	letter-spacing: 0.2em;
 	color: $prim-green;
 }
 .ml13 {
 	font-weight: 700;
-	font-size: 1.2em;
+	font-size: clamp(1.2em, 2.5vw, 2.5em);
 	text-transform: uppercase;
 	letter-spacing: 0.2em;
 	color: $prim-green;
@@ -250,6 +253,11 @@ header {
 .ml12 .letter {
 	display: inline-block;
 	line-height: 1em;
+}
+.nappi {
+	font-size: clamp(1.2em, 2.5vw, 2em);
+	font-weight: 700;
+	color: rgba(0, 0, 0, 0.6);
 }
 
 /* buttonit */
@@ -304,7 +312,7 @@ section {
 	}
 	#palvelumme {
 		@include varjo-koholla();
-
+		border-radius: 20px;
 		img {
 			max-width: 70%;
 		}
@@ -316,6 +324,9 @@ section {
 	#yhteystiedot {
 		img {
 			max-width: 70%;
+		}
+		p {
+			line-height: 0;
 		}
 	}
 	form {
@@ -391,7 +402,9 @@ body.tumma {
 }
 #header.tumma {
 	background: $prim-tumma;
-	@include varjo-koholla-tumma();
+	border-radius: 20px 20px 0 0;
+	background: #2f2828;
+	box-shadow: 27px 27px 54px #262020, -27px -27px 54px #383030;
 }
 #palvelumme.tumma {
 	background: $prim-tumma;
@@ -413,7 +426,6 @@ body.tumma {
 }
 .grid.tumma {
 	background: $prim-tumma;
-	background: radial-gradient(circle, rgba(255, 2, 102, 1) 0%, rgba(47, 40, 40, 1) 69%);
 }
 label.tumma {
 	color: $prim-purple;
@@ -429,7 +441,25 @@ footer.tumma {
 
 /* mediaqueryt ja isomman version asetukset */
 
-@media screen and (min-width: 900px) {
+@media screen and (min-width: 992px) {
+	#tietoa-meistä {
+		img {
+			margin-top: 20%;
+		}
+	}
+}
+
+@media screen and (min-width: 992px) {
+	.btn-warning {
+		padding-left: 50px;
+		padding-right: 50px;
+	}
+	.card-group {
+		left: 50%;
+		margin-left: -205px;
+		margin-top: -90px;
+	}
+
 	.card {
 		position: relative;
 		height: 270px;
@@ -471,7 +501,7 @@ footer.tumma {
 	.name,
 	.from,
 	.to {
-		color: rgba(255, 255, 255, 0.8);
+		color: rgba(0, 0, 0, 0.8);
 		font-weight: 400;
 		letter-spacing: 2px;
 		text-shadow: 0 0 2px rgba(0, 0, 0, 0.6);
@@ -499,5 +529,33 @@ footer.tumma {
 		font-size: 0.5rem;
 		bottom: 35px;
 		right: 40px;
+	}
+
+	#palvelumme {
+		height: 100%;
+		padding: 50px;
+		img {
+			width: 100%;
+			margin-top: 20%;
+		}
+		/* 	p {
+			margin-left: 20px;
+			margin-right: 20px;
+		} */
+	}
+	#tietoa-meistä {
+		img {
+			margin-top: 50px;
+			width: 70%;
+		}
+	}
+	#lupauksemme {
+		margin-left: 200px;
+		margin-right: 200px;
+	}
+	#yhteystiedot {
+		img {
+			margin-top: 50px;
+		}
 	}
 }
