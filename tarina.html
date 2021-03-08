@@ -16,6 +16,43 @@
     <link rel="stylesheet" href="css/tyyli.css">
 </head>
 <body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-warning sticky-top d-none d-lg-block">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="index.html">koti<i class="fas fa-home"></i></a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse " id="navbarNav">
+            <div class="m-auto">
+            <ul class="navbar-nav">
+             
+              <li class="nav-item">
+                <a class="nav-link" href="index.html#palvelumme">Palvelumme</i></a>
+              </li>
+               
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  Tietoa meistä
+                </a>
+                <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                  <li><a class="dropdown-item" href="index.html#tietoa-meistä">Tannerkoski Capital Oy</a></li>
+                  <li><a class="dropdown-item" href="index.html#lupauksemme">Arvolupauksemme</a></li>
+                  <li><hr class="dropdown-divider"></li>
+                  <li><a class="dropdown-item" href="tarina.html">Tarinamme</a></li>
+                  <li><a class="dropdown-item" href="#tiimi">Tiimi</a></li>
+                </ul>
+              </li>
+           
+              <li class="nav-item">
+                <a class="nav-link" href="#yhteystiedot">Ota yhteyttä</a>
+              </li>
+           
+            </div>
+            </ul>
+          </div>
+        </div>
+      </nav>
     <div class="container">
     <header id="header">
                 
@@ -33,62 +70,87 @@
           </label>   
 </header>
 
-<a class="btn btn-warning mt-5" href="/index.html">Palaa takaisin</a>
+<a class="btn btn-warning mt-5 d-lg-none" href="/index.html">Palaa takaisin</a>
     <section>
-    <h1 class="mt-5" >Tarinamme</h1>
+        <div id="tarinamme">
+            <div class="row">
+                <div class="col col-lg-6">
+    <h1  class="my-5 " >Tarinamme</h1>
     <p>Tannerkoski Capital Oy:n tarina alkoi, kun yrityksen perustajajäsenet huomasivat etteivät pk-yritykset pysty löytämään parhaita rahoitusmalleja/ratkaisuja toiminnalleen. Syitä tähän on monia, mutta suurimpana esteenä ovat pk-yritysten osaamattomuus ja kyky pysyä jatkuvassa murroksessa olevan rahoitusmarkkinan rahoitusmahdollisuuksien perässä. Kiristyneen lainsäädännön ja pankkisääntelyn kautta pk-yritysten on entistä vaikeampi hakea rahoitusta toiminnalleen liikepankeilta, joissa usein vaaditaan niin sanottuja ylivakuuksia lainojen vakuudeksi johtuen tiukentuneista vakavaraisuussäännöksistä liikepankkeja kohtaan.</p>
     <p>Rahoitusinstrumenttien määrä kasvaa jatkuvasti ja lisäksi on uusia rahoitusmalleja tulee markkinoille lähes tulkoon päivittäin. Ei ihme, että pk-yritysten on vaikea pysyä ajan tasalla kaikista mahdollisista rahoitusinstrumentaista, saati sitten valita paras mahdollinen rahoitusmalli juuri oman yrityksen tarpeeseen. Tannerkoski Capital Oy onkin syntynyt auttamaan pk-yrityksiä ja tehostamaan rahoitusmarkkinoita.</p>
+</div>
+<div class="col col-lg-6 d-none d-lg-block">
+    <img src="img/success.jpeg" alt="">
+</div>
+</div>
     </section>
    <!--  tiimi -->
     <section>
         <div id="tiimi">
+            <div class="row">
         <h2>Tiimi</h2>
-        <h4>Hallinto</h4>
+        <h4 id="hallinto">Hallinto</h4>
+        <div class="col col-lg-4">
         <h5>Jaakko Tannerkoski</h5>
         <p>Toimitusjohtaja</p>
         <p>+358 400 199 940</p>
         <p>Jaakko@tannerkoski.fi</p>
         <a href="https://www.linkedin.com/in/jaakko-tannerkoski-42b2014b/"><i class="fab fa-linkedin"></i></a>
-        <hr>
+    </div>
+        <hr class="d-lg-none">
+        <div class="col col-lg-4">
         <h5>Olli Tannerkoski</h5>
         <p>Hallituksen pj.</p>
         <p>+358 400 199 942</p>
         <p>Olli@tannerkoski.fi</p>
         <a href="https://www.linkedin.com/in/olli-tannerkoski-3221b74/"><i class="fab fa-linkedin"></i></a>
-        <hr>
+    </div>
+    <hr class="d-lg-none">
+    <div class="col col-lg-4">
         <h5>Taina Bunsdorff</h5>
         <p>Back office</p>
         <p>+358 456 521 012</p>
         <p>Taina.Bonsdorff@tannerkoski.fi</p>
-        <a href="https://www.linkedin.com/in/taina-bonsdorff-tannerkoski-0ba1b279/"><i class="fab fa-linkedin"></i></a><hr class="h2">
-
-        <h4>Myynti</h4>
+        <a href="https://www.linkedin.com/in/taina-bonsdorff-tannerkoski-0ba1b279/"><i class="fab fa-linkedin"></i></a>
+       
+    </div>
+    <hr class="h2">
+        <h4 id="myynti">Myynti</h4>
+        <div class="col col-lg-6">
         <h5>Robin Nygård</h5>
         <p>Partner, coo</p>
         <p>+358 45 104 3800</p>
         <p>Robin.Nygard@tannerkoski.fi</p>
         <a href="https://www.linkedin.com/in/robin-nyg%C3%A5rd-6aa48498/"><i class="fab fa-linkedin"></i></a>
-        <hr>
+    </div>
+    <hr class="d-lg-none">
+    <div class="col col-lg-6">
         <h5>Marko Juhanen</h5>
         <p>Partner / Asiakashankinta</p>
         <p>+358 50 461 8566</p>
         <p>Marko.Juhanen@tannerkoski.fi</p>
         <a href="https://www.linkedin.com/in/marko-juhanen-28336a162/"><i class="fab fa-linkedin"></i></a>
-        <hr>
+        <hr class="d-lg-none">
+    </div>
+        <!-- houm, tässä kohtaa col-12 koska halusin että kaikki menee yhteen riviin kerralla -->
+        <div class="col-12 col-lg-6">
         <h5>Mikko Smalén</h5>
         <p>Partner</p>
         <p>+358 40 530 0411</p>
         <p>Mikko.Smalen@tannerkoski.fi</p>
         <a href="https://www.linkedin.com/in/mikko-smal%C3%A9n-954244115/"><i class="fab fa-linkedin"></i></a>
-        <hr>
+    </div>
+        <hr class="d-lg-none">
+        <div class="col col-lg-6">
         <h5>Jenni Marttila</h5>
         <p>Junior partner</p>
         <p>+358 40 559 2881</p>
         <p>Jenni@tannerkoski.fi</p>
         <a href="https://www.linkedin.com/in/jenni-marttila-279b62138/"><i class="fab fa-linkedin"></i></a><br>
-        <hr class="h2" > 
     </div>
-        <a class="btn btn-warning" href="/index.html">Palaa takaisin</a>
+    </div>
+</div>
+        <a class="btn btn-warning d-lg-none" href="/index.html">Palaa takaisin</a>
     </section>
    
     <footer>

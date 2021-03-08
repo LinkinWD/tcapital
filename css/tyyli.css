@@ -433,8 +433,38 @@ section .field textarea:focus + label {
   opacity: 1;
 }
 
-section .tiimi {
+section #tarinamme {
+  margin: 20px;
+}
+
+section #tarinamme h1 {
+  text-transform: uppercase;
+  font-weight: 700;
+}
+
+section #tiimi {
   line-height: 0;
+}
+
+section #tiimi #hallinto {
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+section #tiimi #myynti {
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+section #tiimi h2,
+section #tiimi h4 {
+  text-transform: uppercase;
+  font-weight: 700;
+}
+
+section #tiimi i {
+  font-size: 3rem;
+  margin-bottom: 10px;
 }
 
 footer {
@@ -623,6 +653,9 @@ footer.tumma {
     width: 100%;
     margin-top: 20%;
   }
+  #tietoa-meistä {
+    margin-top: 40px;
+  }
   #tietoa-meistä img {
     margin-top: 50px;
     width: 70%;
@@ -636,6 +669,20 @@ footer.tumma {
   }
   #yhteystiedot h3 {
     margin: 30px;
+  }
+  #tarinamme {
+    margin: 80px;
+  }
+  #tiimi {
+    line-height: 0;
+  }
+  #tiimi #hallinto {
+    margin-top: 30px;
+    margin-bottom: 30px;
+  }
+  #tiimi #myynti {
+    margin-top: 30px;
+    margin-bottom: 30px;
   }
 }
 /*# sourceMappingURL=tyyli.css.map */
