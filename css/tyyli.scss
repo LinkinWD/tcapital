@@ -2,8 +2,7 @@ $transition-time: 0.3s;
 $bg-color: #e3f2fd;
 $prim-purple: #bb86fc;
 $prim-green: #03dac5;
-$prim-blue: #3700b3;
-$prim-pink: #ff7597;
+
 $prim-red: #ff0266;
 $color: #2f2828;
 $prim-tumma: #2f2828;
@@ -47,13 +46,21 @@ body {
 	margin: 0;
 	padding: 0;
 	.container-fluid {
-		background: rgba(76, 175, 80, 0.3);
+		background: #ffc107;
 	}
 	img {
 		width: 70%;
 	}
 	button {
 		background: $prim-purple;
+	}
+	.dropdown-menu {
+		background: #ffc107;
+		li {
+			a:hover {
+				background-color: #eed37b;
+			}
+		}
 	}
 }
 
@@ -153,8 +160,8 @@ header {
 	.pallo {
 		position: absolute;
 		display: block;
-		width: 100px;
-		height: 100px;
+		width: 120px;
+		height: 120px;
 		border-radius: 50%;
 	}
 	.nro1 {
@@ -164,6 +171,8 @@ header {
 		background: radial-gradient(circle at 65% 15%, white 1px, aqua 3%, darkblue 60%, aqua 100%);
 	}
 	.nro2 {
+		width: 150px;
+		height: 150px;
 		top: 15%;
 		left: 70%;
 		margin-left: -100px;
@@ -255,16 +264,30 @@ header {
 /* tervetuloa animaatiot */
 
 .ml12 {
-	margin-top: 100px;
+	margin-top: 50px;
 	font-weight: 700;
-	font-size: clamp(1.8em, 3.5vw, 3em);
+	font-size: clamp(1.5em, 3.5vw, 2.5em);
 	text-transform: uppercase;
 	letter-spacing: 0.2em;
 	color: $prim-green;
 }
 .ml13 {
 	font-weight: 700;
-	font-size: clamp(1.2em, 2.5vw, 2.5em);
+	font-size: clamp(1.2em, 3vw, 2.1em);
+	text-transform: uppercase;
+	letter-spacing: 0.2em;
+	color: $prim-green;
+}
+.ml14 {
+	font-weight: 700;
+	font-size: clamp(1.5em, 3vw, 2.5em);
+	text-transform: uppercase;
+	letter-spacing: 0.2em;
+	color: $prim-green;
+}
+.ml15 {
+	font-weight: 700;
+	font-size: clamp(1.5em, 3vw, 2.5em);
 	text-transform: uppercase;
 	letter-spacing: 0.2em;
 	color: $prim-green;
@@ -273,6 +296,7 @@ header {
 	display: inline-block;
 	line-height: 1em;
 }
+
 .nappi {
 	font-size: clamp(1.2em, 2.5vw, 2em);
 	font-weight: 700;
@@ -414,6 +438,9 @@ section {
 			font-size: 3rem;
 			margin-bottom: 10px;
 		}
+		hr {
+			height: 5px;
+		}
 	}
 }
 
@@ -423,6 +450,7 @@ footer {
 	margin-bottom: 120px;
 	@include varjo-painunut();
 	padding: 10px;
+	h3,
 	h5 {
 		font-weight: 700;
 	}
@@ -507,6 +535,10 @@ footer.tumma {
 		.pallo {
 			height: 150px;
 			width: 150px;
+		}
+		.nro2 {
+			height: 200px;
+			width: 200px;
 		}
 	}
 	.card {
@@ -593,6 +625,12 @@ footer.tumma {
 		} */
 	}
 	#tietoa-meistä {
+		&::before {
+			content: "";
+			display: block;
+			height: 30px; /* fixed header height*/
+			margin: -30px 0 0; /* negative fixed header height */
+		}
 		margin-top: 40px;
 		img {
 			margin-top: 50px;
@@ -600,10 +638,22 @@ footer.tumma {
 		}
 	}
 	#lupauksemme {
+		&::before {
+			content: "";
+			display: block;
+			height: 30px; /* fixed header height*/
+			margin: -30px 0 0; /* negative fixed header height */
+		}
 		margin-left: 200px;
 		margin-right: 200px;
 	}
 	#yhteystiedot {
+		&::before {
+			content: "";
+			display: block;
+			height: 20px; /* fixed header height*/
+			margin: -20px 0 0; /* negative fixed header height */
+		}
 		img {
 			margin-top: 50px;
 		}
@@ -613,8 +663,20 @@ footer.tumma {
 	}
 	#tarinamme {
 		margin: 80px;
+		img {
+			width: auto;
+			height: 80%;
+			margin: auto;
+			padding-top: 40px;
+		}
 	}
 	#tiimi {
+		&::before {
+			content: "";
+			display: block;
+			height: 30px; /* fixed header height*/
+			margin: -30px 0 0; /* negative fixed header height */
+		}
 		line-height: 0;
 		#hallinto {
 			margin-top: 30px;

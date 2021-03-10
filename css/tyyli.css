@@ -21,7 +21,7 @@ body {
 }
 
 .navbar .container-fluid {
-  background: rgba(76, 175, 80, 0.3);
+  background: #ffc107;
 }
 
 .navbar img {
@@ -30,6 +30,14 @@ body {
 
 .navbar button {
   background: #bb86fc;
+}
+
+.navbar .dropdown-menu {
+  background: #ffc107;
+}
+
+.navbar .dropdown-menu li a:hover {
+  background-color: #eed37b;
 }
 
 .container {
@@ -153,8 +161,8 @@ header #mode {
 .grid .pallo {
   position: absolute;
   display: block;
-  width: 100px;
-  height: 100px;
+  width: 120px;
+  height: 120px;
   border-radius: 50%;
 }
 
@@ -166,6 +174,8 @@ header #mode {
 }
 
 .grid .nro2 {
+  width: 150px;
+  height: 150px;
   top: 15%;
   left: 70%;
   margin-left: -100px;
@@ -262,9 +272,9 @@ header #mode {
 
 /* tervetuloa animaatiot */
 .ml12 {
-  margin-top: 100px;
+  margin-top: 50px;
   font-weight: 700;
-  font-size: clamp(1.8em, 3.5vw, 3em);
+  font-size: clamp(1.5em, 3.5vw, 2.5em);
   text-transform: uppercase;
   letter-spacing: 0.2em;
   color: #03dac5;
@@ -272,7 +282,23 @@ header #mode {
 
 .ml13 {
   font-weight: 700;
-  font-size: clamp(1.2em, 2.5vw, 2.5em);
+  font-size: clamp(1.2em, 3vw, 2.1em);
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+  color: #03dac5;
+}
+
+.ml14 {
+  font-weight: 700;
+  font-size: clamp(1.5em, 3vw, 2.5em);
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+  color: #03dac5;
+}
+
+.ml15 {
+  font-weight: 700;
+  font-size: clamp(1.5em, 3vw, 2.5em);
   text-transform: uppercase;
   letter-spacing: 0.2em;
   color: #03dac5;
@@ -467,6 +493,10 @@ section #tiimi i {
   margin-bottom: 10px;
 }
 
+section #tiimi hr {
+  height: 5px;
+}
+
 footer {
   margin: 20px;
   line-height: 0.8;
@@ -478,6 +508,7 @@ footer {
   padding: 10px;
 }
 
+footer h3,
 footer h5 {
   font-weight: 700;
 }
@@ -574,6 +605,10 @@ footer.tumma {
     height: 150px;
     width: 150px;
   }
+  .grid .nro2 {
+    height: 200px;
+    width: 200px;
+  }
   .card {
     position: relative;
     height: 270px;
@@ -656,6 +691,14 @@ footer.tumma {
   #tietoa-meistä {
     margin-top: 40px;
   }
+  #tietoa-meistä::before {
+    content: "";
+    display: block;
+    height: 30px;
+    /* fixed header height*/
+    margin: -30px 0 0;
+    /* negative fixed header height */
+  }
   #tietoa-meistä img {
     margin-top: 50px;
     width: 70%;
@@ -663,6 +706,22 @@ footer.tumma {
   #lupauksemme {
     margin-left: 200px;
     margin-right: 200px;
+  }
+  #lupauksemme::before {
+    content: "";
+    display: block;
+    height: 30px;
+    /* fixed header height*/
+    margin: -30px 0 0;
+    /* negative fixed header height */
+  }
+  #yhteystiedot::before {
+    content: "";
+    display: block;
+    height: 20px;
+    /* fixed header height*/
+    margin: -20px 0 0;
+    /* negative fixed header height */
   }
   #yhteystiedot img {
     margin-top: 50px;
@@ -673,8 +732,22 @@ footer.tumma {
   #tarinamme {
     margin: 80px;
   }
+  #tarinamme img {
+    width: auto;
+    height: 80%;
+    margin: auto;
+    padding-top: 40px;
+  }
   #tiimi {
     line-height: 0;
+  }
+  #tiimi::before {
+    content: "";
+    display: block;
+    height: 30px;
+    /* fixed header height*/
+    margin: -30px 0 0;
+    /* negative fixed header height */
   }
   #tiimi #hallinto {
     margin-top: 30px;
