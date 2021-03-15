@@ -7,7 +7,7 @@ const toggle = document.querySelector('.toggle')
 const header = document.querySelector('#header')
 const palvelumme = document.querySelector('#palvelumme')
 const lupaus = document.querySelector('#lupauksemme')
-const grid = document.querySelector('.grid')
+
 const labels = document.querySelectorAll('label')
 const footer = document.querySelector('footer')
 
@@ -24,7 +24,7 @@ const tummaMoodiPäälle = () => {
     header.classList.add('tumma')
     palvelumme.classList.add('tumma')
     lupaus.classList.add('tumma')
-    grid.classList.add('tumma')
+    
     for( let yksi of labels) {
       yksi.classList.add('tumma')
       
@@ -50,7 +50,7 @@ const tummaMoodiPois = () => {
   header.classList.remove('tumma')
   palvelumme.classList.remove('tumma')
   lupaus.classList.remove('tumma')
-  grid.classList.remove('tumma')
+  
   for( let yksi of labels) {
     yksi.classList.remove('tumma')  
     }
