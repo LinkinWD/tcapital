@@ -162,78 +162,10 @@ header #mode {
           transform: translate3d(25%, 0, 0);
 }
 
-/* tervetuloa animaatiot */
-.ml15 {
-  font-weight: 700;
-  font-size: clamp(1.6em, 2.5vw, 3em);
-  text-transform: uppercase;
-  letter-spacing: 0.5em;
-}
-
-.ml15 .word {
-  display: inline-block;
-  line-height: 1em;
-}
-
-.ml12 {
-  margin-top: 100px;
-  font-weight: 700;
-  font-size: clamp(0.8em, 2.5vw, 2em);
-  text-transform: uppercase;
-  letter-spacing: 0.5em;
-}
-
-.ml12 .letter {
-  display: inline-block;
-  line-height: 1em;
-}
-
-.ml13 {
-  font-weight: 700;
-  font-size: clamp(0.8em, 2.5vw, 2em);
-  text-transform: uppercase;
-  letter-spacing: 0.5em;
-}
-
-.ml13 .letter {
-  display: inline-block;
-  line-height: 1em;
-}
-
-.nappi {
-  font-size: clamp(1em, 2.5vw, 2em);
-  margin-top: 100px;
-}
-
-/* buttonit */
-.btn {
-  border-radius: 500px;
-}
-
-.btn-group {
-  z-index: 100;
-  position: fixed;
-  bottom: 0;
-  left: 0;
-  right: 0;
-}
-
-.btn-group img {
-  width: 25px;
-}
-
-.btn-group a {
-  color: black;
-}
-
-.btn-group i {
-  color: black;
-  font-size: 1.5rem;
-}
-
-.btn-group .btn {
-  border-radius: 0;
-  font-size: 0.7rem;
+/* animaatiot */
+.animaatio {
+  width: 50vw;
+  height: 40vh;
 }
 
 /* sectionit alkaa */
@@ -426,6 +358,10 @@ body.tumma {
   background: #2f2828;
   -webkit-box-shadow: 27px 27px 54px #262020, -27px -27px 54px #383030;
           box-shadow: 27px 27px 54px #262020, -27px -27px 54px #383030;
+}
+
+#otsikko-kehys.tumma {
+  color: #ffc107;
 }
 
 #palvelumme.tumma {

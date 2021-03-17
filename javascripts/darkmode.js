@@ -11,7 +11,8 @@ const lupaus = document.querySelector('#lupauksemme')
 const labels = document.querySelectorAll('label')
 const footer = document.querySelector('footer')
 
-
+let vaaleaLogo = document.querySelector('.image1')
+let tummaLogo = document.querySelector('.image2')
 
 
 const tummaMoodiPäälle = () => {
@@ -20,6 +21,8 @@ const tummaMoodiPäälle = () => {
         yksi.classList.add('tumma')
         
     }
+    vaaleaLogo.classList.add('piilota')
+    tummaLogo.classList.remove('piilota')
     toggle.classList.add('tumma')
     header.classList.add('tumma')
     palvelumme.classList.add('tumma')
@@ -45,7 +48,8 @@ const tummaMoodiPois = () => {
       yksi.classList.remove('tumma')
       
   }
-
+  tummaLogo.classList.add('piilota')
+  vaaleaLogo.classList.remove('piilota')
   toggle.classList.remove('tumma')
   header.classList.remove('tumma')
   palvelumme.classList.remove('tumma')

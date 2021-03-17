@@ -1,47 +1,36 @@
 
+const estraadi = document.querySelector('.animaatio')
+/* First thing we need to do is to create a scene. Scene is like a universe where we can add objects, camera and lights etc. */
+const scene = new THREE.Scene();
+scene.background = new THREE.Color( 0x2f2828 ); 
+/* Next we need to setup the camera. basically it’s the width of the perception angle. Let’s set it to 75, next is the aspect ratio, we’re going to use current width divided by height. */
+const camera = new THREE.PerspectiveCamera( 55, window.innerWidth / window.innerHeight );
+camera.position.z = 5
+camera.position.x = 0
 
 
-// Wrap every letter in a span
-let textWrapper = document.querySelector('.ml12');
-textWrapper.innerHTML = textWrapper.textContent.replace(/\S/g, "<span class='letter'>$&</span>");
-// Wrap every letter in a span
-let textWrapperTwo = document.querySelector('.ml13');
-textWrapperTwo.innerHTML = textWrapperTwo.textContent.replace(/\S/g, "<span class='lettertwo'>$&</span>");
+
+const renderer = new THREE.WebGLRenderer( { antialias: true});
+
+renderer.setSize( window.innerWidth , window.innerHeight);
+estraadi.append( renderer.domElement );
+
+const hlight = new THREE.PointLight( 0xff0000, 100 );
+scene.add( hlight );
+
+let loader = new THREE.GLTFLoader()
+
+loader.load('img/logo.glb', function(glb){
+    scene.add(glb.scene)
+    renderer.render(scene,camera);
+})
+glb.rotation.x =5
+
+var animate = function(){
+    glb.rotation.x += 0.01;
+    renderer.render(scene,camera);
+    requestAnimationFrame(animate);
+}
 
 
-document.addEventListener("DOMContentLoaded", function(event) {
-
-anime.timeline({loop: false})
-  .add({
-    targets: '.ml15 .word',
-    scale: [14,1],
-    opacity: [0, 1],
-    easing: "easeOutCirc",
-    duration: 800,
-    delay: (el, i) => 800 * i
-  })
-  .add({
-    targets: '.ml12 .letter',
-    translateX: [40,0],
-    translateZ: 0,
-    opacity: [0,1],
-    easing: "easeOutExpo",
-    duration: 800,
-    delay: (el, i) => 100 + 30 * i
-  })
-  .add({
-    targets: '.ml13 .lettertwo',
-    translateX: [40,0],
-    translateZ: 0,
-    opacity: [0,1],
-    easing: "easeOutExpo",
-    duration: 800,
-    delay: (el, i) => 100 + 30 * i
-  })
-  .add({
-    targets: '.nappi',
-    scale: [0,1],
-    duration: 600
-  })
-
-});
+animate()
