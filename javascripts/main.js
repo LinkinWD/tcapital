@@ -1,36 +1,61 @@
+//Variables for setup
 
-const estraadi = document.querySelector('.animaatio')
-/* First thing we need to do is to create a scene. Scene is like a universe where we can add objects, camera and lights etc. */
-const scene = new THREE.Scene();
-scene.background = new THREE.Color( 0x2f2828 ); 
-/* Next we need to setup the camera. basically it’s the width of the perception angle. Let’s set it to 75, next is the aspect ratio, we’re going to use current width divided by height. */
-const camera = new THREE.PerspectiveCamera( 55, window.innerWidth / window.innerHeight );
-camera.position.z = 5
-camera.position.x = 0
+let container;
+let camera;
+let renderer;
+let scene;
+let house;
 
+function init() {
+  container = document.querySelector(".scene");
 
+  //Create scene
+  scene = new THREE.Scene();
 
-const renderer = new THREE.WebGLRenderer( { antialias: true});
+  const fov = 35;
+  const aspect = container.clientWidth / container.clientHeight;
+  const near = 0.1;
+  const far = 500;
 
-renderer.setSize( window.innerWidth , window.innerHeight);
-estraadi.append( renderer.domElement );
+  //Camera setup
+  camera = new THREE.PerspectiveCamera(fov, aspect, near, far);
+  camera.position.set(-2, -6, 30);
 
-const hlight = new THREE.PointLight( 0xff0000, 100 );
-scene.add( hlight );
+  const ambient = new THREE.AmbientLight(0x404040, 2);
+  scene.add(ambient);
 
-let loader = new THREE.GLTFLoader()
+  const light = new THREE.DirectionalLight(0xffffff, 2);
+  light.position.set(50, 50, 100);
+  scene.add(light);
+  //Renderer
+  renderer = new THREE.WebGLRenderer({ antialias: true, alpha: true });
+  renderer.setSize(container.clientWidth, container.clientHeight);
+  renderer.setPixelRatio(window.devicePixelRatio);
 
-loader.load('img/logo.glb', function(glb){
-    scene.add(glb.scene)
-    renderer.render(scene,camera);
-})
-glb.rotation.x =5
+  container.appendChild(renderer.domElement);
 
-var animate = function(){
-    glb.rotation.x += 0.01;
-    renderer.render(scene,camera);
-    requestAnimationFrame(animate);
+  //Load Model
+  let loader = new THREE.GLTFLoader();
+  loader.load("./img/logo.glb", function(gltf) {
+    scene.add(gltf.scene);
+    house = gltf.scene.children[0];
+    animate();
+  });
 }
 
+function animate() {
+  requestAnimationFrame(animate);
+  house.rotation.z += 0.01;
+  renderer.render(scene, camera);
+}
 
-animate()
+init();
+
+function onWindowResize() {
+  camera.aspect = container.clientWidth / container.clientHeight;
+  camera.updateProjectionMatrix();
+
+  renderer.setSize(container.clientWidth, container.clientHeight);
+}
+
+window.addEventListener("resize", onWindowResize);
