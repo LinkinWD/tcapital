@@ -52,23 +52,26 @@ a {
 .landing {
   height: 100vh;
   position: relative;
-}
-
-.landing::after {
-  content: "";
-  background: url(/img/TCsvg.svg);
+  background: url(/img/luotettu2.jpg);
   background-repeat: no-repeat;
   background-position: center;
-  background-size: 60%;
-  opacity: 0.1;
-  top: 0;
-  left: 0;
-  bottom: 0;
-  right: 0;
-  position: absolute;
-  z-index: -1;
+  background-size: cover;
 }
 
+/* .landing::after {
+	content: "";
+	background: url(/img/luotettu2.jpg);
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: 60%;
+	opacity: 0.3;
+	top: 0;
+	left: 0;
+	bottom: 0;
+	right: 0;
+	position: absolute;
+	z-index: 1;
+} */
 header {
   height: 8vh;
   display: -webkit-box;
@@ -87,7 +90,6 @@ header {
   margin-bottom: 10vh;
   background-position: center;
   background-repeat: no-repeat;
-  border-radius: 20px 20px 0 0;
   background: #e3f2fd;
   -webkit-box-shadow: 27px 27px 54px #8a949a, -27px -27px 54px #ffffff;
           box-shadow: 27px 27px 54px #8a949a, -27px -27px 54px #ffffff;
@@ -169,10 +171,24 @@ header #mode {
 
 .selitys {
   position: absolute;
-  bottom: 35vh;
+  bottom: 25vh;
   left: 0;
   right: 0;
+  color: #e3f2fd;
+}
+
+.selitys h2 {
   font-weight: 700;
+  font-size: clamp(1.7rem, 5vw, 4rem);
+}
+
+.selitys h4 {
+  font-weight: 700;
+  font-size: clamp(1.2rem, 5vw, 3rem);
+}
+
+.nappi {
+  margin-top: 12vh;
 }
 
 .scene,
@@ -399,7 +415,6 @@ body.tumma {
 
 #header.tumma {
   background: #2f2828;
-  border-radius: 20px 20px 0 0;
   background: #2f2828;
   -webkit-box-shadow: 27px 27px 54px #262020, -27px -27px 54px #383030;
           box-shadow: 27px 27px 54px #262020, -27px -27px 54px #383030;
