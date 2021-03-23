@@ -7,7 +7,7 @@
 }
 
 body {
-  background: #e3f2fd;
+  background: #ffffff;
   color: black;
   font-family: 'Montserrat', sans-serif;
   -webkit-transition: 0.3s;
@@ -21,7 +21,7 @@ body {
 }
 
 .navbar .container-fluid {
-  background: #ffc107;
+  background: #18447e;
 }
 
 .navbar img {
@@ -32,12 +32,9 @@ body {
   background: #bb86fc;
 }
 
-.navbar .dropdown-menu {
-  background: #ffc107;
-}
-
-.navbar .dropdown-menu li a:hover {
-  background-color: #eed37b;
+.navbar .dropdown-menu a:hover {
+  background-color: #18447e;
+  color: white;
 }
 
 .container {
@@ -46,16 +43,26 @@ body {
 
 a {
   text-decoration: none;
-  color: #03dac5;
+  color: white;
 }
 
 .landing {
+  /* height: 100vh;
+	position: relative;
+	background: url(/img/luotettu2.jpg);
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: cover; */
+}
+
+.landing video {
+  -o-object-fit: cover;
+     object-fit: cover;
+  width: 100vw;
   height: 100vh;
   position: relative;
-  background: url(/img/luotettu2.jpg);
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
+  top: 0;
+  left: 0;
 }
 
 /* .landing::after {
@@ -174,21 +181,17 @@ header #mode {
   bottom: 25vh;
   left: 0;
   right: 0;
-  color: #e3f2fd;
+  color: white;
 }
 
-.selitys h2 {
+.selitys h1 {
   font-weight: 700;
-  font-size: clamp(1.7rem, 5vw, 4rem);
+  font-size: clamp(1.9rem, 5vw, 4rem);
 }
 
-.selitys h4 {
+.selitys h1 h4 {
   font-weight: 700;
-  font-size: clamp(1.2rem, 5vw, 3rem);
-}
-
-.nappi {
-  margin-top: 12vh;
+  font-size: clamp(1.4rem, 4vw, 3rem);
 }
 
 .scene,
@@ -215,18 +218,21 @@ canvas {
   width: 25px;
 }
 
-.btn-group a {
-  color: black;
-}
-
 .btn-group i {
-  color: black;
   font-size: 1.5rem;
 }
 
 .btn-group .btn {
   border-radius: 0;
   font-size: 0.7rem;
+  background-color: #18447e;
+  color: white;
+}
+
+.nappi {
+  margin-top: 12vh;
+  background-color: #18447e;
+  color: white;
 }
 
 /* sectionit alkaa */
@@ -236,6 +242,7 @@ section {
   margin-right: 20px;
 }
 
+section h4,
 section h2 {
   margin-bottom: 20px;
   padding: 10px;
@@ -244,7 +251,7 @@ section h2 {
 section i {
   font-size: 2rem;
   margin-bottom: 10px;
-  color: #03dac5;
+  color: white;
 }
 
 section p {
@@ -258,11 +265,20 @@ section a {
 }
 
 section #palvelumme {
+  border-radius: 37px;
+  background: #18447e;
+  -webkit-box-shadow: 23px 23px 45px #6a6a6b, -23px -23px 45px #afb9c5;
+          box-shadow: 23px 23px 45px #6a6a6b, -23px -23px 45px #afb9c5;
   border-radius: 20px;
-  background: #e3f2fd;
-  -webkit-box-shadow: 27px 27px 54px #8a949a, -27px -27px 54px #ffffff;
-          box-shadow: 27px 27px 54px #8a949a, -27px -27px 54px #ffffff;
-  border-radius: 20px;
+}
+
+section #palvelumme h2,
+section #palvelumme h4 {
+  color: white;
+}
+
+section #palvelumme p {
+  color: white;
 }
 
 section #palvelumme img {
@@ -270,10 +286,19 @@ section #palvelumme img {
 }
 
 section #lupauksemme {
-  border-radius: 20px;
-  background: #e3f2fd;
-  -webkit-box-shadow: 27px 27px 54px #8a949a, -27px -27px 54px #ffffff;
-          box-shadow: 27px 27px 54px #8a949a, -27px -27px 54px #ffffff;
+  border-radius: 37px;
+  background: #18447e;
+  -webkit-box-shadow: 23px 23px 45px #6a6a6b, -23px -23px 45px #afb9c5;
+          box-shadow: 23px 23px 45px #6a6a6b, -23px -23px 45px #afb9c5;
+}
+
+section #lupauksemme h2,
+section #lupauksemme h4 {
+  color: white;
+}
+
+section #lupauksemme p {
+  color: white;
 }
 
 section #yhteystiedot img {
@@ -287,6 +312,9 @@ section #yhteystiedot p {
 section form {
   display: inline-block;
   height: 500px;
+  background-color: #18447e;
+  padding: 10px 40px;
+  border-radius: 10px;
 }
 
 section .field {
@@ -314,7 +342,6 @@ section .field input,
 section .field textarea {
   border-radius: 5px;
   border: none;
-  padding: 5px;
 }
 
 section .field input:focus {
@@ -324,6 +351,7 @@ section .field input:focus {
 section .field input:focus + label {
   -webkit-transform: translateY(-1px);
           transform: translateY(-1px);
+  color: white;
   -webkit-transform: scale(1.4);
           transform: scale(1.4);
   opacity: 1;
@@ -335,6 +363,7 @@ section .field input:focus {
 }
 
 section .field textarea:focus + label {
+  color: white;
   -webkit-transform: translateY(-270px);
           transform: translateY(-270px);
   -webkit-transform: scale(1.4);
@@ -385,9 +414,10 @@ footer {
   line-height: 0.8;
   margin-bottom: 120px;
   border-radius: 20px;
-  background: #e3f2fd;
-  -webkit-box-shadow: inset 20px 20px 60px #c1ced7, inset -20px -20px 60px #ffffff;
-          box-shadow: inset 20px 20px 60px #c1ced7, inset -20px -20px 60px #ffffff;
+  background: #18447e;
+  -webkit-box-shadow: inset 10px 10px 30px #054394, inset -10px -10px 30px #0755bb;
+          box-shadow: inset 10px 10px 30px #054394, inset -10px -10px 30px #0755bb;
+  color: white;
   padding: 10px;
 }
 
@@ -398,7 +428,7 @@ footer h5 {
 
 footer i {
   font-size: 3rem;
-  color: #18447e;
+  color: white;
   margin-top: 10px;
 }
 
@@ -408,68 +438,52 @@ footer i {
 }
 
 /* tummaversio */
-body.tumma {
-  background: #2f2828;
-  color: rgba(255, 255, 255, 0.6);
+/* body.tumma {
+	background: $prim-tumma;
+	color: rgba($color: #ffffff, $alpha: 0.6);
 }
-
 #header.tumma {
-  background: #2f2828;
-  background: #2f2828;
-  -webkit-box-shadow: 27px 27px 54px #262020, -27px -27px 54px #383030;
-          box-shadow: 27px 27px 54px #262020, -27px -27px 54px #383030;
-}
+	background: $prim-tumma;
 
+	background: #2f2828;
+	box-shadow: 27px 27px 54px #262020, -27px -27px 54px #383030;
+}
 #otsikko-kehys.tumma {
-  color: #ffc107;
+	color: #ffc107;
 }
-
 #palvelumme.tumma {
-  background: #2f2828;
-  border-radius: 20px;
-  background: #2f2828;
-  -webkit-box-shadow: 27px 27px 54px #262020, -27px -27px 54px #383030;
-          box-shadow: 27px 27px 54px #262020, -27px -27px 54px #383030;
+	background: $prim-tumma;
+	@include varjo-koholla-tumma();
 }
-
 #lupauksemme.tumma {
-  background: #2f2828;
-  border-radius: 20px;
-  background: #2f2828;
-  -webkit-box-shadow: 27px 27px 54px #262020, -27px -27px 54px #383030;
-          box-shadow: 27px 27px 54px #262020, -27px -27px 54px #383030;
+	background: $prim-tumma;
+	@include varjo-koholla-tumma();
 }
-
 .toggle.tumma {
-  isolation: isolate;
-  position: relative;
-  height: 30px;
-  width: 60px;
-  border-radius: 15px;
-  overflow: hidden;
-  -webkit-box-shadow: -8px -4px 8px 0px #000000, 8px 4px 12px 0px #141414, 4px 4px 4px 0px #666668 inset, -4px -4px 4px 0px #0e0d0d inset;
-          box-shadow: -8px -4px 8px 0px #000000, 8px 4px 12px 0px #141414, 4px 4px 4px 0px #666668 inset, -4px -4px 4px 0px #0e0d0d inset;
+	isolation: isolate;
+	position: relative;
+	height: 30px;
+	width: 60px;
+	border-radius: 15px;
+	overflow: hidden;
+	box-shadow: -8px -4px 8px 0px #000000, 8px 4px 12px 0px #141414, 4px 4px 4px 0px #666668 inset,
+		-4px -4px 4px 0px #0e0d0d inset;
 }
-
 .grid.tumma {
-  background: #2f2828;
+	background: $prim-tumma;
 }
-
 label.tumma {
-  color: #bb86fc;
+	color: $prim-purple;
 }
-
-section.tumma i {
-  color: #ff0266;
+section.tumma {
+	i {
+		color: $prim-red;
+	}
 }
-
 footer.tumma {
-  border-radius: 20px;
-  background: #2f2828;
-  -webkit-box-shadow: inset 20px 20px 60px #282222, inset -20px -20px 60px #362e2e;
-          box-shadow: inset 20px 20px 60px #282222, inset -20px -20px 60px #362e2e;
+	@include varjo-painunut-tumma();
 }
-
+ */
 /* mediaqueryt ja isomman version asetukset */
 @media screen and (min-width: 992px) {
   #tietoa-meistä img {
@@ -478,89 +492,9 @@ footer.tumma {
 }
 
 @media screen and (min-width: 992px) {
-  .btn-warning {
+  .btn {
     padding-left: 50px;
     padding-right: 50px;
-  }
-  .card-group {
-    left: 50%;
-    margin-left: -205px;
-    margin-top: -90px;
-  }
-  .grid .pallo {
-    height: 150px;
-    width: 150px;
-  }
-  .grid .nro2 {
-    height: 200px;
-    width: 200px;
-  }
-  .card {
-    position: relative;
-    height: 270px;
-    width: 450px;
-    border-radius: 25px;
-    background: rgba(255, 255, 255, 0.2);
-    -webkit-backdrop-filter: blur(30px);
-            backdrop-filter: blur(30px);
-    /* This will produce the blur */
-    border: 2px solid rgba(255, 255, 255, 0.1);
-    -webkit-box-shadow: 0 0 80px rgba(0, 0, 0, 0.2);
-            box-shadow: 0 0 80px rgba(0, 0, 0, 0.2);
-    overflow: hidden;
-  }
-  .logo img,
-  .chip img,
-  .number,
-  .name,
-  .from,
-  .to,
-  .ring {
-    position: absolute;
-    /* All items inside card should have absolute position */
-  }
-  .logo img {
-    top: 35px;
-    right: 40px;
-    width: 80px;
-    height: auto;
-    opacity: 0.8;
-  }
-  .chip img {
-    top: 120px;
-    left: 40px;
-    width: 50px;
-    height: auto;
-    opacity: 0.8;
-  }
-  .number,
-  .name,
-  .from,
-  .to {
-    color: rgba(0, 0, 0, 0.8);
-    font-weight: 400;
-    letter-spacing: 2px;
-    text-shadow: 0 0 2px rgba(0, 0, 0, 0.6);
-  }
-  .number {
-    left: 40px;
-    bottom: 65px;
-    font-family: "Nunito", sans-serif;
-  }
-  .name {
-    font-size: 1rem;
-    left: 40px;
-    bottom: 35px;
-  }
-  .from {
-    font-size: 0.5rem;
-    bottom: 35px;
-    right: 110px;
-  }
-  .to {
-    font-size: 0.5rem;
-    bottom: 35px;
-    right: 40px;
   }
   #palvelumme {
     height: 100%;
