@@ -188,7 +188,7 @@ header {
 }
 .selitys {
 	position: absolute;
-	bottom: 25vh;
+	bottom: 40vh;
 	left: 0;
 	right: 0;
 
@@ -212,6 +212,11 @@ canvas {
 /* buttonit */
 .btn {
 	border-radius: 500px;
+	background: $prim-tc;
+	color: white;
+}
+.perus {
+	padding: 5px 40px;
 }
 
 .btn-group {
@@ -223,8 +228,7 @@ canvas {
 	img {
 		width: 25px;
 	}
-	a {
-	}
+
 	i {
 		font-size: 1.5rem;
 	}
@@ -233,10 +237,12 @@ canvas {
 		font-size: 0.7rem;
 		background-color: $prim-tc;
 		color: white;
+
+		border: $prim-tc;
 	}
 }
 .nappi {
-	margin-top: 12vh;
+	margin-top: 2vh;
 	background-color: $prim-tc;
 	color: white;
 }
@@ -273,6 +279,7 @@ section {
 
 	#lupauksemme {
 		@include varjo-koholla();
+		padding: 2rem;
 	}
 	#yhteystiedot {
 		img {
@@ -509,6 +516,9 @@ footer.tumma {
 			height: 30px; /* fixed header height*/
 			margin: -30px 0 0; /* negative fixed header height */
 		}
+		i {
+			color: $prim-tc;
+		}
 		line-height: 0;
 		#hallinto {
 			margin-top: 30px;
@@ -518,5 +528,8 @@ footer.tumma {
 			margin-top: 30px;
 			margin-bottom: 30px;
 		}
+	}
+	footer {
+		padding: 3rem;
 	}
 }

@@ -178,7 +178,7 @@ header #mode {
 
 .selitys {
   position: absolute;
-  bottom: 25vh;
+  bottom: 40vh;
   left: 0;
   right: 0;
   color: white;
@@ -204,6 +204,12 @@ canvas {
 /* buttonit */
 .btn {
   border-radius: 500px;
+  background: #18447e;
+  color: white;
+}
+
+.perus {
+  padding: 5px 40px;
 }
 
 .btn-group {
@@ -227,10 +233,11 @@ canvas {
   font-size: 0.7rem;
   background-color: #18447e;
   color: white;
+  border: #18447e;
 }
 
 .nappi {
-  margin-top: 12vh;
+  margin-top: 2vh;
   background-color: #18447e;
   color: white;
 }
@@ -290,6 +297,7 @@ section #lupauksemme {
   background: #18447e;
   -webkit-box-shadow: 23px 23px 45px #6a6a6b, -23px -23px 45px #afb9c5;
           box-shadow: 23px 23px 45px #6a6a6b, -23px -23px 45px #afb9c5;
+  padding: 2rem;
 }
 
 section #lupauksemme h2,
@@ -569,6 +577,9 @@ footer.tumma {
     margin: -30px 0 0;
     /* negative fixed header height */
   }
+  #tiimi i {
+    color: #18447e;
+  }
   #tiimi #hallinto {
     margin-top: 30px;
     margin-bottom: 30px;
@@ -576,6 +587,9 @@ footer.tumma {
   #tiimi #myynti {
     margin-top: 30px;
     margin-bottom: 30px;
+  }
+  footer {
+    padding: 3rem;
   }
 }
 /*# sourceMappingURL=tyyli.css.map */

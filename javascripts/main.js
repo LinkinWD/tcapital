@@ -19,14 +19,16 @@ function init() {
 
   //Camera setup
   camera = new THREE.PerspectiveCamera(fov, aspect, near, far);
-  camera.position.set(-2, -0.8, 70);
+  camera.position.set(-9, -24, 70);
 
-  const ambient = new THREE.AmbientLight(0x404040, 2);
+  const ambient = new THREE.AmbientLight(0x404040, 1.4);
   scene.add(ambient);
-
-  const light = new THREE.DirectionalLight(0xffffff, 2);
-  light.position.set(50, 50, 100);
+  const hemilight = new THREE.HemisphereLight(0xb1e1ff, 0xb97a20, 1);
+    scene.add(hemilight);
+  const light = new THREE.DirectionalLight(0xffffff, 1.4);
+  light.position.set(50, 50, 50);
   scene.add(light);
+  
   //Renderer
   renderer = new THREE.WebGLRenderer({ antialias: true, alpha: true });
   renderer.setSize(container.clientWidth, container.clientHeight);
@@ -38,14 +40,16 @@ function init() {
   let loader = new THREE.GLTFLoader();
   loader.load("./img/logo.gltf", function(gltf) {
     scene.add(gltf.scene);
-    house = gltf.scene.children[0];
+    move = gltf.scene.children[0];
+    
+   
     animate();
   });
 }
 
 function animate() {
   requestAnimationFrame(animate);
-  house.rotation.z += 0.01;
+  move.rotation.z += 0.01;
   
   
   renderer.render(scene, camera);
