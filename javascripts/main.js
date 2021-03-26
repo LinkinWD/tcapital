@@ -12,26 +12,28 @@ function init() {
   //Create scene
   scene = new THREE.Scene();
 
-  const fov = 30;
-  const aspect = container.clientWidth / container.clientHeight;
+  const fov = 50;
+  const aspect = container.clientWidth  / container.clientHeight ;
   const near = 0.1;
-  const far = 500;
+  const far = 100;
 
   //Camera setup
   camera = new THREE.PerspectiveCamera(fov, aspect, near, far);
-  camera.position.set(-9, -24, 70);
+  camera.position.set(-11, -30, 50);
 
-  const ambient = new THREE.AmbientLight(0x404040, 1.4);
+  const ambient = new THREE.AmbientLight(0xffffff, 1.5);
   scene.add(ambient);
-  const hemilight = new THREE.HemisphereLight(0xb1e1ff, 0xb97a20, 1);
-    scene.add(hemilight);
-  const light = new THREE.DirectionalLight(0xffffff, 1.4);
-  light.position.set(50, 50, 50);
+  
+  const light = new THREE.DirectionalLight(0xffffff, 4.5);
+  light.position.set(20, 20, 20); 
   scene.add(light);
+  const light2 = new THREE.PointLight( 0xffffff, 5, 100 );
+/* light2.position.set( 50, 50, 50 ); */
+  scene.add( light2 );
   
   //Renderer
   renderer = new THREE.WebGLRenderer({ antialias: true, alpha: true });
-  renderer.setSize(container.clientWidth, container.clientHeight);
+  renderer.setSize(container.clientWidth , container.clientHeight );
   renderer.setPixelRatio(window.devicePixelRatio);
 
   container.appendChild(renderer.domElement);
@@ -42,14 +44,17 @@ function init() {
     scene.add(gltf.scene);
     move = gltf.scene.children[0];
     
-   
+    
+    
     animate();
   });
 }
 
+
+
 function animate() {
   requestAnimationFrame(animate);
-  move.rotation.z += 0.01;
+  move.rotation.z -= 0.01;
   
   
   renderer.render(scene, camera);

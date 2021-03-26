@@ -28,10 +28,6 @@ body {
   width: 70%;
 }
 
-.navbar button {
-  background: #bb86fc;
-}
-
 .navbar .dropdown-menu a:hover {
   background-color: #18447e;
   color: white;
@@ -46,15 +42,6 @@ a {
   color: white;
 }
 
-.landing {
-  /* height: 100vh;
-	position: relative;
-	background: url(/img/luotettu2.jpg);
-	background-repeat: no-repeat;
-	background-position: center;
-	background-size: cover; */
-}
-
 .landing video {
   -o-object-fit: cover;
      object-fit: cover;
@@ -63,117 +50,6 @@ a {
   position: relative;
   top: 0;
   left: 0;
-}
-
-/* .landing::after {
-	content: "";
-	background: url(/img/luotettu2.jpg);
-	background-repeat: no-repeat;
-	background-position: center;
-	background-size: 60%;
-	opacity: 0.3;
-	top: 0;
-	left: 0;
-	bottom: 0;
-	right: 0;
-	position: absolute;
-	z-index: 1;
-} */
-header {
-  height: 8vh;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  margin-bottom: 10vh;
-  background-position: center;
-  background-repeat: no-repeat;
-  background: #e3f2fd;
-  -webkit-box-shadow: 27px 27px 54px #8a949a, -27px -27px 54px #ffffff;
-          box-shadow: 27px 27px 54px #8a949a, -27px -27px 54px #ffffff;
-}
-
-header img {
-  width: 50px;
-  margin: 30px;
-}
-
-header h5 {
-  font-size: clamp(1rem, 2vw, 2rem);
-  font-weight: 700;
-}
-
-header #mode {
-  margin-right: 40px;
-  padding: 20px;
-  border-radius: 50%;
-  background-color: #bb86fc;
-}
-
-/* kytkin */
-.label {
-  display: -webkit-inline-box;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  cursor: pointer;
-  color: #394a56;
-}
-
-.label-text {
-  margin-right: 16px;
-}
-
-.toggle {
-  isolation: isolate;
-  position: relative;
-  height: 30px;
-  width: 60px;
-  margin-right: 20px;
-  border-radius: 15px;
-  overflow: hidden;
-  -webkit-box-shadow: -8px -4px 8px 0px #ffffff, 8px 4px 12px 0px #d1d9e6, 4px 4px 4px 0px #d1d9e6 inset, -4px -4px 4px 0px #ffffff inset;
-          box-shadow: -8px -4px 8px 0px #ffffff, 8px 4px 12px 0px #d1d9e6, 4px 4px 4px 0px #d1d9e6 inset, -4px -4px 4px 0px #ffffff inset;
-}
-
-.toggle-state {
-  display: none;
-}
-
-.indicator {
-  height: 100%;
-  width: 200%;
-  background: #03dac5;
-  border-radius: 15px;
-  -webkit-transform: translate3d(-75%, 0, 0);
-          transform: translate3d(-75%, 0, 0);
-  -webkit-transition: -webkit-transform 0.4s cubic-bezier(0.85, 0.05, 0.18, 1.35);
-  transition: -webkit-transform 0.4s cubic-bezier(0.85, 0.05, 0.18, 1.35);
-  transition: transform 0.4s cubic-bezier(0.85, 0.05, 0.18, 1.35);
-  transition: transform 0.4s cubic-bezier(0.85, 0.05, 0.18, 1.35), -webkit-transform 0.4s cubic-bezier(0.85, 0.05, 0.18, 1.35);
-  -webkit-box-shadow: -2px -2px 8px 0px #039485, 4px 4px 12px 0px #029687;
-          box-shadow: -2px -2px 8px 0px #039485, 4px 4px 12px 0px #029687;
-}
-
-.toggle-state:checked ~ .indicator {
-  -webkit-transform: translate3d(25%, 0, 0);
-          transform: translate3d(25%, 0, 0);
-}
-
-/* animaatiot  ja alku tekstit*/
-.container2 {
-  height: 80hv;
 }
 
 .selitys {
@@ -194,13 +70,6 @@ header #mode {
   font-size: clamp(1.4rem, 4vw, 3rem);
 }
 
-.scene,
-canvas {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-}
-
 /* buttonit */
 .btn {
   border-radius: 500px;
@@ -209,7 +78,7 @@ canvas {
 }
 
 .perus {
-  padding: 5px 40px;
+  padding: 5px 60px;
 }
 
 .btn-group {
@@ -218,6 +87,7 @@ canvas {
   bottom: 0;
   left: 0;
   right: 0;
+  margin-bottom: 60px;
 }
 
 .btn-group img {
@@ -244,7 +114,7 @@ canvas {
 
 /* sectionit alkaa */
 section {
-  margin-top: 60px;
+  margin-top: 10px;
   margin-left: 20px;
   margin-right: 20px;
 }
@@ -274,9 +144,9 @@ section a {
 section #palvelumme {
   border-radius: 37px;
   background: #18447e;
-  -webkit-box-shadow: 23px 23px 45px #6a6a6b, -23px -23px 45px #afb9c5;
-          box-shadow: 23px 23px 45px #6a6a6b, -23px -23px 45px #afb9c5;
-  border-radius: 20px;
+  -webkit-box-shadow: 12px 12px 20px 5px #cfcece;
+          box-shadow: 12px 12px 20px 5px #cfcece;
+  border-radius: 10px;
 }
 
 section #palvelumme h2,
@@ -288,44 +158,64 @@ section #palvelumme p {
   color: white;
 }
 
-section #palvelumme img {
+section picture {
+  margin: 1rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+section img {
   max-width: 70%;
 }
 
-section #lupauksemme {
+#lupauksemme {
   border-radius: 37px;
   background: #18447e;
-  -webkit-box-shadow: 23px 23px 45px #6a6a6b, -23px -23px 45px #afb9c5;
-          box-shadow: 23px 23px 45px #6a6a6b, -23px -23px 45px #afb9c5;
+  -webkit-box-shadow: 12px 12px 20px 5px #cfcece;
+          box-shadow: 12px 12px 20px 5px #cfcece;
   padding: 2rem;
 }
 
-section #lupauksemme h2,
-section #lupauksemme h4 {
+#lupauksemme h2,
+#lupauksemme h4 {
   color: white;
 }
 
-section #lupauksemme p {
+#lupauksemme p {
   color: white;
 }
 
-section #yhteystiedot img {
+#yhteystiedot h4 {
+  margin-bottom: 0;
+}
+
+#yhteystiedot img {
   max-width: 70%;
 }
 
-section #yhteystiedot p {
+#yhteystiedot p {
   line-height: 0;
 }
 
-section form {
+form {
   display: inline-block;
-  height: 500px;
-  background-color: #18447e;
-  padding: 10px 40px;
+  height: 550px;
+  border-radius: 16px;
+  background: #ffffff;
+  -webkit-box-shadow: 13px 13px 26px #dedede, -13px -13px 26px #ffffff, 2px 2px 7px #6a6a6b;
+          box-shadow: 13px 13px 26px #dedede, -13px -13px 26px #ffffff, 2px 2px 7px #6a6a6b;
+  padding: 10px 10px;
   border-radius: 10px;
 }
 
-section .field {
+.field {
   padding-top: 10px;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -336,42 +226,44 @@ section .field {
           flex-direction: column;
 }
 
-section .field label {
+.field label {
   padding-left: 5px;
   -webkit-transition: all 0.3s ease-in;
   transition: all 0.3s ease-in;
   -webkit-transform: translateY(-28px);
           transform: translateY(-28px);
   pointer-events: none;
-  opacity: 0.83;
+  opacity: 0.5;
 }
 
-section .field input,
-section .field textarea {
-  border-radius: 5px;
+.field input,
+.field textarea {
+  padding: 5px;
   border: none;
+  border-radius: 5px;
+  background: #ffffff;
+  -webkit-box-shadow: inset 13px 13px 26px #dedede, inset -13px -13px 26px #ffffff;
+          box-shadow: inset 13px 13px 26px #dedede, inset -13px -13px 26px #ffffff;
 }
 
-section .field input:focus {
+.field input:focus {
   border-bottom: 2px solid black;
 }
 
-section .field input:focus + label {
+.field input:focus + label {
   -webkit-transform: translateY(-1px);
           transform: translateY(-1px);
-  color: white;
   -webkit-transform: scale(1.4);
           transform: scale(1.4);
   opacity: 1;
 }
 
-section .field textarea:focus,
-section .field input:focus {
+.field textarea:focus,
+.field input:focus {
   outline: none;
 }
 
-section .field textarea:focus + label {
-  color: white;
+.field textarea:focus + label {
   -webkit-transform: translateY(-270px);
           transform: translateY(-270px);
   -webkit-transform: scale(1.4);
@@ -379,41 +271,46 @@ section .field textarea:focus + label {
   opacity: 1;
 }
 
-section #tarinamme {
-  margin: 20px;
+#tarinamme .btn {
+  z-index: 3;
 }
 
-section #tarinamme h1 {
+#tarinamme h1 {
   text-transform: uppercase;
   font-weight: 700;
 }
 
-section #tiimi {
+.shake {
+  width: 70%;
+}
+
+#tiimi {
   line-height: 0;
 }
 
-section #tiimi #hallinto {
+#tiimi #hallinto {
   margin-top: 10px;
   margin-bottom: 10px;
 }
 
-section #tiimi #myynti {
+#tiimi #myynti {
   margin-top: 10px;
   margin-bottom: 10px;
 }
 
-section #tiimi h2,
-section #tiimi h4 {
+#tiimi h2,
+#tiimi h4 {
   text-transform: uppercase;
   font-weight: 700;
 }
 
-section #tiimi i {
+#tiimi i {
+  color: #18447e;
   font-size: 3rem;
   margin-bottom: 10px;
 }
 
-section #tiimi hr {
+#tiimi hr {
   height: 5px;
 }
 
@@ -421,12 +318,12 @@ footer {
   margin: 20px;
   line-height: 0.8;
   margin-bottom: 120px;
-  border-radius: 20px;
+  border-radius: 10px;
   background: #18447e;
-  -webkit-box-shadow: inset 10px 10px 30px #054394, inset -10px -10px 30px #0755bb;
-          box-shadow: inset 10px 10px 30px #054394, inset -10px -10px 30px #0755bb;
-  color: white;
+  -webkit-box-shadow: inset 2px 3px 12px #082f66;
+          box-shadow: inset 2px 3px 12px #082f66;
   padding: 10px;
+  color: white;
 }
 
 footer h3,
@@ -506,7 +403,6 @@ footer.tumma {
   }
   #palvelumme {
     height: 100%;
-    padding: 50px;
     /* 	p {
 			margin-left: 20px;
 			margin-right: 20px;
@@ -514,7 +410,6 @@ footer.tumma {
   }
   #palvelumme img {
     width: 100%;
-    margin-top: 20%;
   }
   #tietoa-meistä {
     margin-top: 40px;
@@ -530,10 +425,6 @@ footer.tumma {
   #tietoa-meistä img {
     margin-top: 50px;
     width: 70%;
-  }
-  #lupauksemme {
-    margin-left: 200px;
-    margin-right: 200px;
   }
   #lupauksemme::before {
     content: "";
@@ -558,7 +449,10 @@ footer.tumma {
     margin: 30px;
   }
   #tarinamme {
-    margin: 80px;
+    border-radius: 16px;
+    background: #ffffff;
+    -webkit-box-shadow: 13px 13px 26px #dedede, -13px -13px 26px #ffffff, 2px 2px 7px #6a6a6b;
+            box-shadow: 13px 13px 26px #dedede, -13px -13px 26px #ffffff, 2px 2px 7px #6a6a6b;
   }
   #tarinamme img {
     width: auto;
